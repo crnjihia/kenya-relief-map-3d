@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { BufferGeometry, DoubleSide, ShaderMaterial, Color } from 'three';
-import { ShaderMaterial } from 'three';
 import { useLoader } from '@react-three/fiber';
 import { createColorRampTexture } from '../utils/colors';
 import vertexShader from '../shaders/county.vert.glsl?raw';
@@ -11,9 +10,10 @@ type CountyMeshProps = {
   maxHeight: number;
   id?: string;
   isHovered?: boolean;
+  onClick?: () => void;
 };
 
-export default function CountyMesh({ geometry, maxHeight, id, isHovered }: CountyMeshProps) {
+export default function CountyMesh({ geometry, maxHeight, id, isHovered, onClick }: CountyMeshProps) {
   const colorRampTexture = useMemo(() => createColorRampTexture(), []);
 
   const material = useMemo(
@@ -43,5 +43,5 @@ export default function CountyMesh({ geometry, maxHeight, id, isHovered }: Count
     material.emissiveIntensity = 0;
   }
 
-  return <primitive object={geometry} material={material} {...meshRef} />;
+  return <primitive object={geometry} material={material} {...meshRef} onClick={onClick} />;
 }

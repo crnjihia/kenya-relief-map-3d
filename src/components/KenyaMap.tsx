@@ -1,4 +1,5 @@
-import { useEffect, useState, useMemo, useRef } from 'react';
+import useCameraFocus from '../hooks/useCameraFocus';
+import { Box3, Vector3 } from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Raycaster, Group } from 'three';
 import { gsap } from 'gsap';
@@ -69,7 +70,7 @@ export default function KenyaMap({ metric = 'populationDensity' as const, onHove
       gsap.to(groupRef.current.scale, { y: 1, duration: 1, ease: 'power2.out' });
     }
   }, [metric]);
-  const raycaster = useMemo(() => new Raycaster(), []);
+  const focusOn = useCameraFocus();
 
   useFrame(() => {
     if (!countyGeometries.length) return;
@@ -106,6 +107,12 @@ export default function KenyaMap({ metric = 'populationDensity' as const, onHove
             geometry={geometry}
             maxHeight={maxHeight}
             isHovered={hoveredId === id}
+            onClick={() => {
+              geometry.computeBoundingBox();
+              const center = new Vector3();
+              geometry.boundingBox?.getCenter(center);
+              focusOn(center);
+            }}
           />
         ))}
       </group>

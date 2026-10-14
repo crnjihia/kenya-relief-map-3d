@@ -1,5 +1,5 @@
 import React from 'react';
-import Scene from './components/Scene';
+import KenyaMap from './components/KenyaMap';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       </header>
       {/* Main content */}
       <main className="flex-1 overflow-hidden">
-        <Scene />
+        <KenyaMap />
       </main>
       {/* Footer */}
       <footer className="bg-white dark:bg-gray-800 text-center p-2 text-sm">

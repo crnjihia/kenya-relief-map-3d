@@ -59,7 +59,10 @@ export function useCountyIndicators() {
 
   useEffect(() => {
     let isMounted = true;
-    fetch('/data/indicators.json')
+    const basePath = (import.meta.env.BASE_URL || './').replace(/\/$/, '');
+    const dataUrl = basePath ? `${basePath}/data/indicators.json` : './data/indicators.json';
+
+    fetch(dataUrl)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP error ${res.status}`);
         return res.json();

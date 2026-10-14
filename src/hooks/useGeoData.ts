@@ -19,7 +19,10 @@ export function useGeoData() {
   useEffect(() => {
     let isMounted = true;
 
-    fetch('/data/kenya_counties.geojson')
+    const basePath = (import.meta.env.BASE_URL || './').replace(/\/$/, '');
+    const dataUrl = basePath ? `${basePath}/data/kenya_counties.geojson` : './data/kenya_counties.geojson';
+
+    fetch(dataUrl)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP error ${res.status}`);
         setProgress(45);

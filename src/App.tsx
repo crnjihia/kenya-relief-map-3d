@@ -42,6 +42,7 @@ function App() {
             <option value="gdpPerCapita">GDP per Capita</option>
             <option value="infrastructureScore">Infrastructure Score</option>
           </select>
+          <Legend />
         </div>
       </header>
       {/* Main content */}

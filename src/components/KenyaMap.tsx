@@ -1,123 +1,110 @@
-import useCameraFocus from '../hooks/useCameraFocus';
-import { Box3, Vector3 } from 'three';
-import { useFrame, useThree } from '@react-three/fiber';
-import { Raycaster, Group } from 'three';
-import { gsap } from 'gsap';
+import { useMemo } from 'react';
+import { Vector3 } from 'three';
 import CountyMesh from './CountyMesh';
-import { geoToGeometry } from '../utils/geoToGeometry';
-import { lngLatToXZ } from '../utils/projection';
-import { normalize } from '../utils/normalise';
+import type { CountyFeatureItem } from '../hooks/useGeoData';
+import type { IndicatorsPayload, MetricType } from '../hooks/useCountyIndicators';
+import { normalizeScaled, normalize } from '../utils/normalise';
 
+export interface KenyaMapProps {
+  metric: MetricType;
+  countyItems: CountyFeatureItem[];
+  indicators: IndicatorsPayload | null;
+  hoveredId: string | null;
+  selectedId: string | null;
+  onHover: (id: string | null, clientX?: number, clientY?: number) => void;
+  onSelect: (id: string | null, center?: Vector3) => void;
+}
 
-type Feature = {
-  geometry: any;
-  properties: Record<string, any>;
-};
+export default function KenyaMap({
+  metric,
+  countyItems,
+  indicators,
+  hoveredId,
+  selectedId,
+  onHover,
+  onSelect,
+}: KenyaMapProps) {
+  // Pre-calculate metric bounds and per-county normalized values
+  const countyHeights = useMemo(() => {
+    if (!indicators || countyItems.length === 0) return {};
 
-type FeatureCollection = {
-  type: string;
-  features: Feature[];
-};
-
-export default function KenyaMap({ metric = 'populationDensity' as const, onHover, onSelect }: { metric?: string; onHover?: (id: string | null, value: any) => void; onSelect?: (id: string | null) => void }) {
-
-  const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
-  const [indicators, setIndicators] = useState<any>(null);
-
-  // Load GeoJSON and indicators
-  useEffect(() => {
-    fetch('/data/kenya_counties.geojson')
-      .then((res) => res.json())
-      .then(setGeoData)
-      .catch(console.error);
-    fetch('/data/indicators.json')
-      .then((res) => res.json())
-      .then(setIndicators)
-      .catch(console.error);
-  }, []);
-
-  // Compute per‑county geometries and heights
-  const countyGeometries = useMemo(() => {
-    if (!geoData || !indicators) return [];
-    const values = geoData.features.map((f) => {
-      const id = f.properties?.id || f.properties?.NAME || '';
-      const val = indicators[id]?.[metric];
-      return typeof val === 'number' ? val : 0;
+    const values = countyItems.map((item) => {
+      const county = indicators.counties[item.id] || indicators.counties[String(item.code)];
+      return county ? county[metric] ?? 0 : 0;
     });
+
     const min = Math.min(...values);
     const max = Math.max(...values);
-    // Build array of { id, geometry, height }
-    return geoData.features.map((f, idx) => {
-      const id = f.properties?.id || f.properties?.NAME || `county-${idx}`;
-      const rawValue = indicators[id]?.[metric];
-      const norm = normalize(typeof rawValue === 'number' ? rawValue : 0, min, max);
-      const height = norm; // use normalized value as height (0‑1)
-      const geometry = geoToGeometry({ type: 'FeatureCollection', features: [f] }, height);
-      return { id, geometry, height };
-    });
-  }, [geoData, indicators, metric]);
 
-  // Interaction: raycast for hover
-  const { camera, scene } = useThree();
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const groupRef = useRef<Group>(null);
+    const result: Record<string, { normalized: number; height: number }> = {};
 
-  // Animate height morph on metric change
-  useEffect(() => {
-    if (groupRef.current) {
-      // Reset scale to 0 then animate to 1 for a smooth morph effect
-      groupRef.current.scale.set(1, 0, 1);
-      gsap.to(groupRef.current.scale, { y: 1, duration: 1, ease: 'power2.out' });
-    }
-  }, [metric]);
-  const focusOn = useCameraFocus();
+    countyItems.forEach((item) => {
+      const county = indicators.counties[item.id] || indicators.counties[String(item.code)];
+      const raw = county ? county[metric] ?? 0 : 0;
 
-  useFrame(() => {
-    if (!countyGeometries.length) return;
-    // mouse coordinates are normalized device coordinates in state
-    const { mouse } = useThree().getState();
-    raycaster.setFromCamera(mouse, camera);
-    const intersect = raycaster.intersectObjects(scene.children, true);
-    if (intersect.length > 0) {
-      const object = intersect[0].object;
-      const id = (object as any).userData?.id || null;
-      setHoveredId(id);
-      // Notify parent about hover info
-      if (onHover) {
-        const value = id ? (indicators?.[id]?.[metric] ?? null) : null;
-        onHover(id, value);
+      // Use perceptual scaling (sqrt exponent 0.45) for population density and population
+      // which have severe urban vs rural skew, while linear scaling for scores and GDP
+      let norm = 0;
+      if (metric === 'populationDensity' || metric === 'population') {
+        norm = normalizeScaled(raw, min, max, 0.45, 0.05, 1.0);
+      } else {
+        norm = normalize(raw, min, max, 0.05, 1.0);
       }
-    } else {
-      setHoveredId(null);
-      if (onHover) onHover(null, null);
-    }
-  });
 
-  if (!countyGeometries.length) return null;
+      // Height maps from 0.25 to 3.2 units along Y
+      const height = 0.25 + norm * 2.8;
+      result[item.id] = { normalized: norm, height };
+    });
 
-  const maxHeight = 1; // uniform max for shader uniform
+    return result;
+  }, [countyItems, indicators, metric]);
+
+  const handleCountyClick = (id: string, center: Vector3) => {
+    onSelect(id, center);
+  };
 
   return (
-    <>
-      <group ref={groupRef}>
-        {countyGeometries.map(({ id, geometry, height }) => (
-          <CountyMesh
-            key={id}
-            id={id}
-            geometry={geometry}
-            maxHeight={maxHeight}
-            isHovered={hoveredId === id}
-            onClick={() => {
-              geometry.computeBoundingBox();
-              const center = new Vector3();
-              geometry.boundingBox?.getCenter(center);
-              focusOn(center);
-              if (onSelect) onSelect(id);
-            }}
-          />
-        ))}
-      </group>
-    </>
-  );
+    <group position={[0, 0, 0]}>
+      {/* 47 County Extruded 3D Meshes */}
+      {countyItems.map((item) => {
+        const heightData = countyHeights[item.id] || { normalized: 0.1, height: 0.3 };
+        const isHovered = hoveredId === item.id;
+        const isSelected = selectedId === item.id;
 
+        return (
+          <CountyMesh
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            geometry={item.geometryResult.geometry}
+            center={item.geometryResult.center}
+            normalizedValue={heightData.normalized}
+            height={heightData.height}
+            isHovered={isHovered}
+            isSelected={isSelected}
+            onClick={handleCountyClick}
+            onHover={onHover}
+          />
+        );
+      })}
+
+      {/* Decorative architectural grid pedestal */}
+      <mesh position={[0, -0.05, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[34, 38]} />
+        <meshStandardMaterial
+          color="#0f172a"
+          roughness={0.85}
+          metalness={0.2}
+          polygonOffset
+          polygonOffsetFactor={1}
+          polygonOffsetUnits={1}
+        />
+      </mesh>
+
+      <gridHelper
+        args={[34, 34, '#38bdf8', '#1e293b']}
+        position={[0, -0.04, 0]}
+      />
+    </group>
+  );
 }

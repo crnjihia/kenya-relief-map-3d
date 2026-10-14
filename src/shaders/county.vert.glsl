@@ -1,9 +1,11 @@
-varying float vHeight;
 varying vec3 vNormal;
+varying vec3 vWorldPosition;
+varying float vHeight;
 
 void main() {
+  vNormal = normalize(normalMatrix * normal);
+  vec4 worldPosition = modelMatrix * vec4(position, 1.0);
+  vWorldPosition = worldPosition.xyz;
   vHeight = position.y;
-  vNormal = normal;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPosition;
 }
-

@@ -1,0 +1,3436 @@
+{
+  "metadata": {
+    "sources": [
+      {
+        "name": "KNBS",
+        "description": "Kenya National Bureau of Statistics 2019 Kenya Population and Housing Census"
+      },
+      {
+        "name": "GADM / IEBC",
+        "description": "GADM administrative boundaries Level 1 / IEBC County demarcation"
+      },
+      {
+        "name": "Gross County Product (GCP)",
+        "description": "KNBS Gross County Product reports (2019-2023 estimates in KES)"
+      }
+    ],
+    "lastUpdated": "2024",
+    "totalCounties": 47,
+    "metrics": {
+      "population": {
+        "label": "Population",
+        "unit": "residents",
+        "format": "number"
+      },
+      "populationDensity": {
+        "label": "Population Density",
+        "unit": "people / km²",
+        "format": "number"
+      },
+      "gdpPerCapita": {
+        "label": "GDP per Capita",
+        "unit": "KES",
+        "format": "currency"
+      },
+      "infrastructureScore": {
+        "label": "Infrastructure Index",
+        "unit": "Score (0-100)",
+        "format": "score"
+      }
+    }
+  },
+  "nationalAverage": {
+    "population": 1012006,
+    "populationDensity": 81.8,
+    "gdpPerCapita": 232681,
+    "infrastructureScore": 53.9
+  },
+  "counties": {
+    "1": {
+      "code": 1,
+      "id": "1",
+      "name": "Mombasa",
+      "capital": "Mombasa",
+      "region": "Coast",
+      "areaKm2": 219.9,
+      "population": 1208333,
+      "populationDensity": 5495,
+      "gdpPerCapita": 492000,
+      "infrastructureScore": 84.5,
+      "ranks": {
+        "population": 10,
+        "populationDensity": 2,
+        "gdpPerCapita": 2,
+        "infrastructureScore": 2
+      }
+    },
+    "2": {
+      "code": 2,
+      "id": "2",
+      "name": "Kwale",
+      "capital": "Kwale",
+      "region": "Coast",
+      "areaKm2": 8270.2,
+      "population": 866820,
+      "populationDensity": 105,
+      "gdpPerCapita": 164000,
+      "infrastructureScore": 48,
+      "ranks": {
+        "population": 28,
+        "populationDensity": 31,
+        "gdpPerCapita": 38,
+        "infrastructureScore": 32
+      }
+    },
+    "3": {
+      "code": 3,
+      "id": "3",
+      "name": "Kilifi",
+      "capital": "Kilifi",
+      "region": "Coast",
+      "areaKm2": 12609.7,
+      "population": 1453787,
+      "populationDensity": 115,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 46.5,
+      "ranks": {
+        "population": 7,
+        "populationDensity": 30,
+        "gdpPerCapita": 35,
+        "infrastructureScore": 34
+      }
+    },
+    "4": {
+      "code": 4,
+      "id": "4",
+      "name": "Tana River",
+      "capital": "Hola",
+      "region": "Coast",
+      "areaKm2": 38437,
+      "population": 315942,
+      "populationDensity": 8.2,
+      "gdpPerCapita": 138000,
+      "infrastructureScore": 29,
+      "ranks": {
+        "population": 44,
+        "populationDensity": 46,
+        "gdpPerCapita": 44,
+        "infrastructureScore": 44
+      }
+    },
+    "5": {
+      "code": 5,
+      "id": "5",
+      "name": "Lamu",
+      "capital": "Lamu",
+      "region": "Coast",
+      "areaKm2": 6273.1,
+      "population": 143920,
+      "populationDensity": 23,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 38.5,
+      "ranks": {
+        "population": 47,
+        "populationDensity": 39,
+        "gdpPerCapita": 13,
+        "infrastructureScore": 38
+      }
+    },
+    "6": {
+      "code": 6,
+      "id": "6",
+      "name": "Taita Taveta",
+      "capital": "Mwatate",
+      "region": "Coast",
+      "areaKm2": 17084.1,
+      "population": 340671,
+      "populationDensity": 20,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 47,
+      "ranks": {
+        "population": 43,
+        "populationDensity": 40,
+        "gdpPerCapita": 25,
+        "infrastructureScore": 33
+      }
+    },
+    "7": {
+      "code": 7,
+      "id": "7",
+      "name": "Garissa",
+      "capital": "Garissa",
+      "region": "North Eastern",
+      "areaKm2": 44175,
+      "population": 841353,
+      "populationDensity": 19,
+      "gdpPerCapita": 156000,
+      "infrastructureScore": 32.5,
+      "ranks": {
+        "population": 29,
+        "populationDensity": 41,
+        "gdpPerCapita": 40,
+        "infrastructureScore": 41
+      }
+    },
+    "8": {
+      "code": 8,
+      "id": "8",
+      "name": "Wajir",
+      "capital": "Wajir",
+      "region": "North Eastern",
+      "areaKm2": 56685.9,
+      "population": 781263,
+      "populationDensity": 14,
+      "gdpPerCapita": 132000,
+      "infrastructureScore": 24,
+      "ranks": {
+        "population": 30,
+        "populationDensity": 43,
+        "gdpPerCapita": 46,
+        "infrastructureScore": 46
+      }
+    },
+    "9": {
+      "code": 9,
+      "id": "9",
+      "name": "Mandera",
+      "capital": "Mandera",
+      "region": "North Eastern",
+      "areaKm2": 25991.5,
+      "population": 867457,
+      "populationDensity": 33,
+      "gdpPerCapita": 124000,
+      "infrastructureScore": 22.5,
+      "ranks": {
+        "population": 27,
+        "populationDensity": 38,
+        "gdpPerCapita": 47,
+        "infrastructureScore": 47
+      }
+    },
+    "10": {
+      "code": 10,
+      "id": "10",
+      "name": "Marsabit",
+      "capital": "Marsabit",
+      "region": "Eastern",
+      "areaKm2": 70961.2,
+      "population": 459785,
+      "populationDensity": 6.5,
+      "gdpPerCapita": 148000,
+      "infrastructureScore": 27,
+      "ranks": {
+        "population": 40,
+        "populationDensity": 47,
+        "gdpPerCapita": 41,
+        "infrastructureScore": 45
+      }
+    },
+    "11": {
+      "code": 11,
+      "id": "11",
+      "name": "Isiolo",
+      "capital": "Isiolo",
+      "region": "Eastern",
+      "areaKm2": 25336.1,
+      "population": 268002,
+      "populationDensity": 11,
+      "gdpPerCapita": 185000,
+      "infrastructureScore": 36,
+      "ranks": {
+        "population": 46,
+        "populationDensity": 45,
+        "gdpPerCapita": 32,
+        "infrastructureScore": 39
+      }
+    },
+    "12": {
+      "code": 12,
+      "id": "12",
+      "name": "Meru",
+      "capital": "Meru",
+      "region": "Eastern",
+      "areaKm2": 6936.2,
+      "population": 1545714,
+      "populationDensity": 223,
+      "gdpPerCapita": 246000,
+      "infrastructureScore": 64,
+      "ranks": {
+        "population": 6,
+        "populationDensity": 24,
+        "gdpPerCapita": 17,
+        "infrastructureScore": 11
+      }
+    },
+    "13": {
+      "code": 13,
+      "id": "13",
+      "name": "Tharaka-Nithi",
+      "capital": "Kathwana",
+      "region": "Eastern",
+      "areaKm2": 2564.4,
+      "population": 393177,
+      "populationDensity": 153,
+      "gdpPerCapita": 212000,
+      "infrastructureScore": 55.5,
+      "ranks": {
+        "population": 42,
+        "populationDensity": 27,
+        "gdpPerCapita": 23,
+        "infrastructureScore": 25
+      }
+    },
+    "14": {
+      "code": 14,
+      "id": "14",
+      "name": "Embu",
+      "capital": "Embu",
+      "region": "Eastern",
+      "areaKm2": 2820.7,
+      "population": 608599,
+      "populationDensity": 216,
+      "gdpPerCapita": 268000,
+      "infrastructureScore": 63,
+      "ranks": {
+        "population": 36,
+        "populationDensity": 25,
+        "gdpPerCapita": 12,
+        "infrastructureScore": 13
+      }
+    },
+    "15": {
+      "code": 15,
+      "id": "15",
+      "name": "Kitui",
+      "capital": "Kitui",
+      "region": "Eastern",
+      "areaKm2": 30489.5,
+      "population": 1136187,
+      "populationDensity": 37,
+      "gdpPerCapita": 142000,
+      "infrastructureScore": 41,
+      "ranks": {
+        "population": 14,
+        "populationDensity": 37,
+        "gdpPerCapita": 43,
+        "infrastructureScore": 37
+      }
+    },
+    "16": {
+      "code": 16,
+      "id": "16",
+      "name": "Machakos",
+      "capital": "Machakos",
+      "region": "Eastern",
+      "areaKm2": 6208.2,
+      "population": 1421932,
+      "populationDensity": 229,
+      "gdpPerCapita": 312000,
+      "infrastructureScore": 68.5,
+      "ranks": {
+        "population": 8,
+        "populationDensity": 22,
+        "gdpPerCapita": 6,
+        "infrastructureScore": 9
+      }
+    },
+    "17": {
+      "code": 17,
+      "id": "17",
+      "name": "Makueni",
+      "capital": "Wote",
+      "region": "Eastern",
+      "areaKm2": 8008.8,
+      "population": 987653,
+      "populationDensity": 123,
+      "gdpPerCapita": 194000,
+      "infrastructureScore": 53,
+      "ranks": {
+        "population": 21,
+        "populationDensity": 29,
+        "gdpPerCapita": 29,
+        "infrastructureScore": 28
+      }
+    },
+    "18": {
+      "code": 18,
+      "id": "18",
+      "name": "Nyandarua",
+      "capital": "Ol Kalou",
+      "region": "Central",
+      "areaKm2": 3245.3,
+      "population": 638289,
+      "populationDensity": 197,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 59,
+      "ranks": {
+        "population": 33,
+        "populationDensity": 26,
+        "gdpPerCapita": 14,
+        "infrastructureScore": 19
+      }
+    },
+    "19": {
+      "code": 19,
+      "id": "19",
+      "name": "Nyeri",
+      "capital": "Nyeri",
+      "region": "Central",
+      "areaKm2": 3337.2,
+      "population": 759164,
+      "populationDensity": 227,
+      "gdpPerCapita": 345000,
+      "infrastructureScore": 74.5,
+      "ranks": {
+        "population": 31,
+        "populationDensity": 23,
+        "gdpPerCapita": 4,
+        "infrastructureScore": 4
+      }
+    },
+    "20": {
+      "code": 20,
+      "id": "20",
+      "name": "Kirinyaga",
+      "capital": "Kerugoya",
+      "region": "Central",
+      "areaKm2": 1478.1,
+      "population": 610411,
+      "populationDensity": 413,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 69,
+      "ranks": {
+        "population": 35,
+        "populationDensity": 12,
+        "gdpPerCapita": 8,
+        "infrastructureScore": 8
+      }
+    },
+    "21": {
+      "code": 21,
+      "id": "21",
+      "name": "Murang'a",
+      "capital": "Murang'a",
+      "region": "Central",
+      "areaKm2": 2558.8,
+      "population": 1056640,
+      "populationDensity": 413,
+      "gdpPerCapita": 280000,
+      "infrastructureScore": 66,
+      "ranks": {
+        "population": 18,
+        "populationDensity": 13,
+        "gdpPerCapita": 10,
+        "infrastructureScore": 10
+      }
+    },
+    "22": {
+      "code": 22,
+      "id": "22",
+      "name": "Kiambu",
+      "capital": "Kiambu",
+      "region": "Central",
+      "areaKm2": 2543.5,
+      "population": 2417735,
+      "populationDensity": 951,
+      "gdpPerCapita": 395000,
+      "infrastructureScore": 79.5,
+      "ranks": {
+        "population": 2,
+        "populationDensity": 5,
+        "gdpPerCapita": 3,
+        "infrastructureScore": 3
+      }
+    },
+    "23": {
+      "code": 23,
+      "id": "23",
+      "name": "Turkana",
+      "capital": "Lodwar",
+      "region": "Rift Valley",
+      "areaKm2": 68680.3,
+      "population": 926976,
+      "populationDensity": 13,
+      "gdpPerCapita": 135000,
+      "infrastructureScore": 29.5,
+      "ranks": {
+        "population": 22,
+        "populationDensity": 44,
+        "gdpPerCapita": 45,
+        "infrastructureScore": 43
+      }
+    },
+    "24": {
+      "code": 24,
+      "id": "24",
+      "name": "West Pokot",
+      "capital": "Kapenguria",
+      "region": "Rift Valley",
+      "areaKm2": 9169.4,
+      "population": 621241,
+      "populationDensity": 68,
+      "gdpPerCapita": 146000,
+      "infrastructureScore": 34,
+      "ranks": {
+        "population": 34,
+        "populationDensity": 32,
+        "gdpPerCapita": 42,
+        "infrastructureScore": 40
+      }
+    },
+    "25": {
+      "code": 25,
+      "id": "25",
+      "name": "Samburu",
+      "capital": "Maralal",
+      "region": "Rift Valley",
+      "areaKm2": 21022.2,
+      "population": 310327,
+      "populationDensity": 15,
+      "gdpPerCapita": 158000,
+      "infrastructureScore": 31,
+      "ranks": {
+        "population": 45,
+        "populationDensity": 42,
+        "gdpPerCapita": 39,
+        "infrastructureScore": 42
+      }
+    },
+    "26": {
+      "code": 26,
+      "id": "26",
+      "name": "Trans Nzoia",
+      "capital": "Kitale",
+      "region": "Rift Valley",
+      "areaKm2": 2495.6,
+      "population": 990341,
+      "populationDensity": 397,
+      "gdpPerCapita": 225000,
+      "infrastructureScore": 58.5,
+      "ranks": {
+        "population": 20,
+        "populationDensity": 14,
+        "gdpPerCapita": 18,
+        "infrastructureScore": 20
+      }
+    },
+    "27": {
+      "code": 27,
+      "id": "27",
+      "name": "Uasin Gishu",
+      "capital": "Eldoret",
+      "region": "Rift Valley",
+      "areaKm2": 3345.2,
+      "population": 1163186,
+      "populationDensity": 348,
+      "gdpPerCapita": 310000,
+      "infrastructureScore": 72,
+      "ranks": {
+        "population": 11,
+        "populationDensity": 18,
+        "gdpPerCapita": 7,
+        "infrastructureScore": 6
+      }
+    },
+    "28": {
+      "code": 28,
+      "id": "28",
+      "name": "Elgeyo-Marakwet",
+      "capital": "Iten",
+      "region": "Rift Valley",
+      "areaKm2": 3029.9,
+      "population": 454480,
+      "populationDensity": 150,
+      "gdpPerCapita": 218000,
+      "infrastructureScore": 49,
+      "ranks": {
+        "population": 41,
+        "populationDensity": 28,
+        "gdpPerCapita": 20,
+        "infrastructureScore": 31
+      }
+    },
+    "29": {
+      "code": 29,
+      "id": "29",
+      "name": "Nandi",
+      "capital": "Kapsabet",
+      "region": "Rift Valley",
+      "areaKm2": 2884.2,
+      "population": 885711,
+      "populationDensity": 307,
+      "gdpPerCapita": 220000,
+      "infrastructureScore": 56,
+      "ranks": {
+        "population": 25,
+        "populationDensity": 20,
+        "gdpPerCapita": 19,
+        "infrastructureScore": 24
+      }
+    },
+    "30": {
+      "code": 30,
+      "id": "30",
+      "name": "Baringo",
+      "capital": "Kabarnet",
+      "region": "Rift Valley",
+      "areaKm2": 11015.3,
+      "population": 666763,
+      "populationDensity": 61,
+      "gdpPerCapita": 172000,
+      "infrastructureScore": 42,
+      "ranks": {
+        "population": 32,
+        "populationDensity": 34,
+        "gdpPerCapita": 37,
+        "infrastructureScore": 36
+      }
+    },
+    "31": {
+      "code": 31,
+      "id": "31",
+      "name": "Laikipia",
+      "capital": "Rumuruti",
+      "region": "Rift Valley",
+      "areaKm2": 9461.9,
+      "population": 518560,
+      "populationDensity": 55,
+      "gdpPerCapita": 255000,
+      "infrastructureScore": 57.5,
+      "ranks": {
+        "population": 39,
+        "populationDensity": 35,
+        "gdpPerCapita": 15,
+        "infrastructureScore": 22
+      }
+    },
+    "32": {
+      "code": 32,
+      "id": "32",
+      "name": "Nakuru",
+      "capital": "Nakuru",
+      "region": "Rift Valley",
+      "areaKm2": 7495.1,
+      "population": 2162202,
+      "populationDensity": 288,
+      "gdpPerCapita": 335000,
+      "infrastructureScore": 73,
+      "ranks": {
+        "population": 3,
+        "populationDensity": 21,
+        "gdpPerCapita": 5,
+        "infrastructureScore": 5
+      }
+    },
+    "33": {
+      "code": 33,
+      "id": "33",
+      "name": "Narok",
+      "capital": "Narok",
+      "region": "Rift Valley",
+      "areaKm2": 17944.1,
+      "population": 1157873,
+      "populationDensity": 65,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 44.5,
+      "ranks": {
+        "population": 12,
+        "populationDensity": 33,
+        "gdpPerCapita": 21,
+        "infrastructureScore": 35
+      }
+    },
+    "34": {
+      "code": 34,
+      "id": "34",
+      "name": "Kajiado",
+      "capital": "Kajiado",
+      "region": "Rift Valley",
+      "areaKm2": 21900.9,
+      "population": 1117840,
+      "populationDensity": 51,
+      "gdpPerCapita": 275000,
+      "infrastructureScore": 62,
+      "ranks": {
+        "population": 16,
+        "populationDensity": 36,
+        "gdpPerCapita": 11,
+        "infrastructureScore": 15
+      }
+    },
+    "35": {
+      "code": 35,
+      "id": "35",
+      "name": "Kericho",
+      "capital": "Kericho",
+      "region": "Rift Valley",
+      "areaKm2": 2479,
+      "population": 901777,
+      "populationDensity": 364,
+      "gdpPerCapita": 248000,
+      "infrastructureScore": 63.5,
+      "ranks": {
+        "population": 23,
+        "populationDensity": 16,
+        "gdpPerCapita": 16,
+        "infrastructureScore": 12
+      }
+    },
+    "36": {
+      "code": 36,
+      "id": "36",
+      "name": "Bomet",
+      "capital": "Bomet",
+      "region": "Rift Valley",
+      "areaKm2": 2530.9,
+      "population": 875689,
+      "populationDensity": 346,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 54,
+      "ranks": {
+        "population": 26,
+        "populationDensity": 19,
+        "gdpPerCapita": 26,
+        "infrastructureScore": 27
+      }
+    },
+    "37": {
+      "code": 37,
+      "id": "37",
+      "name": "Kakamega",
+      "capital": "Kakamega",
+      "region": "Western",
+      "areaKm2": 3018.7,
+      "population": 1867579,
+      "populationDensity": 619,
+      "gdpPerCapita": 195000,
+      "infrastructureScore": 61,
+      "ranks": {
+        "population": 4,
+        "populationDensity": 7,
+        "gdpPerCapita": 28,
+        "infrastructureScore": 16
+      }
+    },
+    "38": {
+      "code": 38,
+      "id": "38",
+      "name": "Vihiga",
+      "capital": "Mbale",
+      "region": "Western",
+      "areaKm2": 563.8,
+      "population": 590013,
+      "populationDensity": 1046,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 60.5,
+      "ranks": {
+        "population": 38,
+        "populationDensity": 3,
+        "gdpPerCapita": 36,
+        "infrastructureScore": 17
+      }
+    },
+    "39": {
+      "code": 39,
+      "id": "39",
+      "name": "Bungoma",
+      "capital": "Bungoma",
+      "region": "Western",
+      "areaKm2": 3032.4,
+      "population": 1670570,
+      "populationDensity": 551,
+      "gdpPerCapita": 188000,
+      "infrastructureScore": 58,
+      "ranks": {
+        "population": 5,
+        "populationDensity": 9,
+        "gdpPerCapita": 31,
+        "infrastructureScore": 21
+      }
+    },
+    "40": {
+      "code": 40,
+      "id": "40",
+      "name": "Busia",
+      "capital": "Busia",
+      "region": "Western",
+      "areaKm2": 1694.5,
+      "population": 893681,
+      "populationDensity": 527,
+      "gdpPerCapita": 182000,
+      "infrastructureScore": 56.5,
+      "ranks": {
+        "population": 24,
+        "populationDensity": 10,
+        "gdpPerCapita": 34,
+        "infrastructureScore": 23
+      }
+    },
+    "41": {
+      "code": 41,
+      "id": "41",
+      "name": "Siaya",
+      "capital": "Siaya",
+      "region": "Nyanza",
+      "areaKm2": 2530.5,
+      "population": 993183,
+      "populationDensity": 392,
+      "gdpPerCapita": 190000,
+      "infrastructureScore": 55,
+      "ranks": {
+        "population": 19,
+        "populationDensity": 15,
+        "gdpPerCapita": 30,
+        "infrastructureScore": 26
+      }
+    },
+    "42": {
+      "code": 42,
+      "id": "42",
+      "name": "Kisumu",
+      "capital": "Kisumu",
+      "region": "Nyanza",
+      "areaKm2": 2085.9,
+      "population": 1155574,
+      "populationDensity": 554,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 71.5,
+      "ranks": {
+        "population": 13,
+        "populationDensity": 8,
+        "gdpPerCapita": 9,
+        "infrastructureScore": 7
+      }
+    },
+    "43": {
+      "code": 43,
+      "id": "43",
+      "name": "Homa Bay",
+      "capital": "Homa Bay",
+      "region": "Nyanza",
+      "areaKm2": 3154.7,
+      "population": 1131950,
+      "populationDensity": 359,
+      "gdpPerCapita": 184000,
+      "infrastructureScore": 50.5,
+      "ranks": {
+        "population": 15,
+        "populationDensity": 17,
+        "gdpPerCapita": 33,
+        "infrastructureScore": 30
+      }
+    },
+    "44": {
+      "code": 44,
+      "id": "44",
+      "name": "Migori",
+      "capital": "Migori",
+      "region": "Nyanza",
+      "areaKm2": 2596.5,
+      "population": 1116436,
+      "populationDensity": 430,
+      "gdpPerCapita": 198000,
+      "infrastructureScore": 52,
+      "ranks": {
+        "population": 17,
+        "populationDensity": 11,
+        "gdpPerCapita": 27,
+        "infrastructureScore": 29
+      }
+    },
+    "45": {
+      "code": 45,
+      "id": "45",
+      "name": "Kisii",
+      "capital": "Kisii",
+      "region": "Nyanza",
+      "areaKm2": 1317.5,
+      "population": 1266860,
+      "populationDensity": 962,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 62.5,
+      "ranks": {
+        "population": 9,
+        "populationDensity": 4,
+        "gdpPerCapita": 22,
+        "infrastructureScore": 14
+      }
+    },
+    "46": {
+      "code": 46,
+      "id": "46",
+      "name": "Nyamira",
+      "capital": "Nyamira",
+      "region": "Nyanza",
+      "areaKm2": 899.4,
+      "population": 605576,
+      "populationDensity": 673,
+      "gdpPerCapita": 208000,
+      "infrastructureScore": 59.5,
+      "ranks": {
+        "population": 37,
+        "populationDensity": 6,
+        "gdpPerCapita": 24,
+        "infrastructureScore": 18
+      }
+    },
+    "47": {
+      "code": 47,
+      "id": "47",
+      "name": "Nairobi",
+      "capital": "Nairobi",
+      "region": "Nairobi",
+      "areaKm2": 703.9,
+      "population": 4397073,
+      "populationDensity": 6247,
+      "gdpPerCapita": 645000,
+      "infrastructureScore": 93,
+      "ranks": {
+        "population": 1,
+        "populationDensity": 1,
+        "gdpPerCapita": 1,
+        "infrastructureScore": 1
+      }
+    },
+    "mombasa": {
+      "code": 1,
+      "id": "1",
+      "name": "Mombasa",
+      "capital": "Mombasa",
+      "region": "Coast",
+      "areaKm2": 219.9,
+      "population": 1208333,
+      "populationDensity": 5495,
+      "gdpPerCapita": 492000,
+      "infrastructureScore": 84.5,
+      "ranks": {
+        "population": 10,
+        "populationDensity": 2,
+        "gdpPerCapita": 2,
+        "infrastructureScore": 2
+      }
+    },
+    "MOMBASA": {
+      "code": 1,
+      "id": "1",
+      "name": "Mombasa",
+      "capital": "Mombasa",
+      "region": "Coast",
+      "areaKm2": 219.9,
+      "population": 1208333,
+      "populationDensity": 5495,
+      "gdpPerCapita": 492000,
+      "infrastructureScore": 84.5,
+      "ranks": {
+        "population": 10,
+        "populationDensity": 2,
+        "gdpPerCapita": 2,
+        "infrastructureScore": 2
+      }
+    },
+    "kwale": {
+      "code": 2,
+      "id": "2",
+      "name": "Kwale",
+      "capital": "Kwale",
+      "region": "Coast",
+      "areaKm2": 8270.2,
+      "population": 866820,
+      "populationDensity": 105,
+      "gdpPerCapita": 164000,
+      "infrastructureScore": 48,
+      "ranks": {
+        "population": 28,
+        "populationDensity": 31,
+        "gdpPerCapita": 38,
+        "infrastructureScore": 32
+      }
+    },
+    "KWALE": {
+      "code": 2,
+      "id": "2",
+      "name": "Kwale",
+      "capital": "Kwale",
+      "region": "Coast",
+      "areaKm2": 8270.2,
+      "population": 866820,
+      "populationDensity": 105,
+      "gdpPerCapita": 164000,
+      "infrastructureScore": 48,
+      "ranks": {
+        "population": 28,
+        "populationDensity": 31,
+        "gdpPerCapita": 38,
+        "infrastructureScore": 32
+      }
+    },
+    "kilifi": {
+      "code": 3,
+      "id": "3",
+      "name": "Kilifi",
+      "capital": "Kilifi",
+      "region": "Coast",
+      "areaKm2": 12609.7,
+      "population": 1453787,
+      "populationDensity": 115,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 46.5,
+      "ranks": {
+        "population": 7,
+        "populationDensity": 30,
+        "gdpPerCapita": 35,
+        "infrastructureScore": 34
+      }
+    },
+    "KILIFI": {
+      "code": 3,
+      "id": "3",
+      "name": "Kilifi",
+      "capital": "Kilifi",
+      "region": "Coast",
+      "areaKm2": 12609.7,
+      "population": 1453787,
+      "populationDensity": 115,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 46.5,
+      "ranks": {
+        "population": 7,
+        "populationDensity": 30,
+        "gdpPerCapita": 35,
+        "infrastructureScore": 34
+      }
+    },
+    "tana river": {
+      "code": 4,
+      "id": "4",
+      "name": "Tana River",
+      "capital": "Hola",
+      "region": "Coast",
+      "areaKm2": 38437,
+      "population": 315942,
+      "populationDensity": 8.2,
+      "gdpPerCapita": 138000,
+      "infrastructureScore": 29,
+      "ranks": {
+        "population": 44,
+        "populationDensity": 46,
+        "gdpPerCapita": 44,
+        "infrastructureScore": 44
+      }
+    },
+    "TANA RIVER": {
+      "code": 4,
+      "id": "4",
+      "name": "Tana River",
+      "capital": "Hola",
+      "region": "Coast",
+      "areaKm2": 38437,
+      "population": 315942,
+      "populationDensity": 8.2,
+      "gdpPerCapita": 138000,
+      "infrastructureScore": 29,
+      "ranks": {
+        "population": 44,
+        "populationDensity": 46,
+        "gdpPerCapita": 44,
+        "infrastructureScore": 44
+      }
+    },
+    "lamu": {
+      "code": 5,
+      "id": "5",
+      "name": "Lamu",
+      "capital": "Lamu",
+      "region": "Coast",
+      "areaKm2": 6273.1,
+      "population": 143920,
+      "populationDensity": 23,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 38.5,
+      "ranks": {
+        "population": 47,
+        "populationDensity": 39,
+        "gdpPerCapita": 13,
+        "infrastructureScore": 38
+      }
+    },
+    "LAMU": {
+      "code": 5,
+      "id": "5",
+      "name": "Lamu",
+      "capital": "Lamu",
+      "region": "Coast",
+      "areaKm2": 6273.1,
+      "population": 143920,
+      "populationDensity": 23,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 38.5,
+      "ranks": {
+        "population": 47,
+        "populationDensity": 39,
+        "gdpPerCapita": 13,
+        "infrastructureScore": 38
+      }
+    },
+    "taita taveta": {
+      "code": 6,
+      "id": "6",
+      "name": "Taita Taveta",
+      "capital": "Mwatate",
+      "region": "Coast",
+      "areaKm2": 17084.1,
+      "population": 340671,
+      "populationDensity": 20,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 47,
+      "ranks": {
+        "population": 43,
+        "populationDensity": 40,
+        "gdpPerCapita": 25,
+        "infrastructureScore": 33
+      }
+    },
+    "TAITA TAVETA": {
+      "code": 6,
+      "id": "6",
+      "name": "Taita Taveta",
+      "capital": "Mwatate",
+      "region": "Coast",
+      "areaKm2": 17084.1,
+      "population": 340671,
+      "populationDensity": 20,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 47,
+      "ranks": {
+        "population": 43,
+        "populationDensity": 40,
+        "gdpPerCapita": 25,
+        "infrastructureScore": 33
+      }
+    },
+    "garissa": {
+      "code": 7,
+      "id": "7",
+      "name": "Garissa",
+      "capital": "Garissa",
+      "region": "North Eastern",
+      "areaKm2": 44175,
+      "population": 841353,
+      "populationDensity": 19,
+      "gdpPerCapita": 156000,
+      "infrastructureScore": 32.5,
+      "ranks": {
+        "population": 29,
+        "populationDensity": 41,
+        "gdpPerCapita": 40,
+        "infrastructureScore": 41
+      }
+    },
+    "GARISSA": {
+      "code": 7,
+      "id": "7",
+      "name": "Garissa",
+      "capital": "Garissa",
+      "region": "North Eastern",
+      "areaKm2": 44175,
+      "population": 841353,
+      "populationDensity": 19,
+      "gdpPerCapita": 156000,
+      "infrastructureScore": 32.5,
+      "ranks": {
+        "population": 29,
+        "populationDensity": 41,
+        "gdpPerCapita": 40,
+        "infrastructureScore": 41
+      }
+    },
+    "wajir": {
+      "code": 8,
+      "id": "8",
+      "name": "Wajir",
+      "capital": "Wajir",
+      "region": "North Eastern",
+      "areaKm2": 56685.9,
+      "population": 781263,
+      "populationDensity": 14,
+      "gdpPerCapita": 132000,
+      "infrastructureScore": 24,
+      "ranks": {
+        "population": 30,
+        "populationDensity": 43,
+        "gdpPerCapita": 46,
+        "infrastructureScore": 46
+      }
+    },
+    "WAJIR": {
+      "code": 8,
+      "id": "8",
+      "name": "Wajir",
+      "capital": "Wajir",
+      "region": "North Eastern",
+      "areaKm2": 56685.9,
+      "population": 781263,
+      "populationDensity": 14,
+      "gdpPerCapita": 132000,
+      "infrastructureScore": 24,
+      "ranks": {
+        "population": 30,
+        "populationDensity": 43,
+        "gdpPerCapita": 46,
+        "infrastructureScore": 46
+      }
+    },
+    "mandera": {
+      "code": 9,
+      "id": "9",
+      "name": "Mandera",
+      "capital": "Mandera",
+      "region": "North Eastern",
+      "areaKm2": 25991.5,
+      "population": 867457,
+      "populationDensity": 33,
+      "gdpPerCapita": 124000,
+      "infrastructureScore": 22.5,
+      "ranks": {
+        "population": 27,
+        "populationDensity": 38,
+        "gdpPerCapita": 47,
+        "infrastructureScore": 47
+      }
+    },
+    "MANDERA": {
+      "code": 9,
+      "id": "9",
+      "name": "Mandera",
+      "capital": "Mandera",
+      "region": "North Eastern",
+      "areaKm2": 25991.5,
+      "population": 867457,
+      "populationDensity": 33,
+      "gdpPerCapita": 124000,
+      "infrastructureScore": 22.5,
+      "ranks": {
+        "population": 27,
+        "populationDensity": 38,
+        "gdpPerCapita": 47,
+        "infrastructureScore": 47
+      }
+    },
+    "marsabit": {
+      "code": 10,
+      "id": "10",
+      "name": "Marsabit",
+      "capital": "Marsabit",
+      "region": "Eastern",
+      "areaKm2": 70961.2,
+      "population": 459785,
+      "populationDensity": 6.5,
+      "gdpPerCapita": 148000,
+      "infrastructureScore": 27,
+      "ranks": {
+        "population": 40,
+        "populationDensity": 47,
+        "gdpPerCapita": 41,
+        "infrastructureScore": 45
+      }
+    },
+    "MARSABIT": {
+      "code": 10,
+      "id": "10",
+      "name": "Marsabit",
+      "capital": "Marsabit",
+      "region": "Eastern",
+      "areaKm2": 70961.2,
+      "population": 459785,
+      "populationDensity": 6.5,
+      "gdpPerCapita": 148000,
+      "infrastructureScore": 27,
+      "ranks": {
+        "population": 40,
+        "populationDensity": 47,
+        "gdpPerCapita": 41,
+        "infrastructureScore": 45
+      }
+    },
+    "isiolo": {
+      "code": 11,
+      "id": "11",
+      "name": "Isiolo",
+      "capital": "Isiolo",
+      "region": "Eastern",
+      "areaKm2": 25336.1,
+      "population": 268002,
+      "populationDensity": 11,
+      "gdpPerCapita": 185000,
+      "infrastructureScore": 36,
+      "ranks": {
+        "population": 46,
+        "populationDensity": 45,
+        "gdpPerCapita": 32,
+        "infrastructureScore": 39
+      }
+    },
+    "ISIOLO": {
+      "code": 11,
+      "id": "11",
+      "name": "Isiolo",
+      "capital": "Isiolo",
+      "region": "Eastern",
+      "areaKm2": 25336.1,
+      "population": 268002,
+      "populationDensity": 11,
+      "gdpPerCapita": 185000,
+      "infrastructureScore": 36,
+      "ranks": {
+        "population": 46,
+        "populationDensity": 45,
+        "gdpPerCapita": 32,
+        "infrastructureScore": 39
+      }
+    },
+    "meru": {
+      "code": 12,
+      "id": "12",
+      "name": "Meru",
+      "capital": "Meru",
+      "region": "Eastern",
+      "areaKm2": 6936.2,
+      "population": 1545714,
+      "populationDensity": 223,
+      "gdpPerCapita": 246000,
+      "infrastructureScore": 64,
+      "ranks": {
+        "population": 6,
+        "populationDensity": 24,
+        "gdpPerCapita": 17,
+        "infrastructureScore": 11
+      }
+    },
+    "MERU": {
+      "code": 12,
+      "id": "12",
+      "name": "Meru",
+      "capital": "Meru",
+      "region": "Eastern",
+      "areaKm2": 6936.2,
+      "population": 1545714,
+      "populationDensity": 223,
+      "gdpPerCapita": 246000,
+      "infrastructureScore": 64,
+      "ranks": {
+        "population": 6,
+        "populationDensity": 24,
+        "gdpPerCapita": 17,
+        "infrastructureScore": 11
+      }
+    },
+    "tharaka-nithi": {
+      "code": 13,
+      "id": "13",
+      "name": "Tharaka-Nithi",
+      "capital": "Kathwana",
+      "region": "Eastern",
+      "areaKm2": 2564.4,
+      "population": 393177,
+      "populationDensity": 153,
+      "gdpPerCapita": 212000,
+      "infrastructureScore": 55.5,
+      "ranks": {
+        "population": 42,
+        "populationDensity": 27,
+        "gdpPerCapita": 23,
+        "infrastructureScore": 25
+      }
+    },
+    "THARAKA-NITHI": {
+      "code": 13,
+      "id": "13",
+      "name": "Tharaka-Nithi",
+      "capital": "Kathwana",
+      "region": "Eastern",
+      "areaKm2": 2564.4,
+      "population": 393177,
+      "populationDensity": 153,
+      "gdpPerCapita": 212000,
+      "infrastructureScore": 55.5,
+      "ranks": {
+        "population": 42,
+        "populationDensity": 27,
+        "gdpPerCapita": 23,
+        "infrastructureScore": 25
+      }
+    },
+    "embu": {
+      "code": 14,
+      "id": "14",
+      "name": "Embu",
+      "capital": "Embu",
+      "region": "Eastern",
+      "areaKm2": 2820.7,
+      "population": 608599,
+      "populationDensity": 216,
+      "gdpPerCapita": 268000,
+      "infrastructureScore": 63,
+      "ranks": {
+        "population": 36,
+        "populationDensity": 25,
+        "gdpPerCapita": 12,
+        "infrastructureScore": 13
+      }
+    },
+    "EMBU": {
+      "code": 14,
+      "id": "14",
+      "name": "Embu",
+      "capital": "Embu",
+      "region": "Eastern",
+      "areaKm2": 2820.7,
+      "population": 608599,
+      "populationDensity": 216,
+      "gdpPerCapita": 268000,
+      "infrastructureScore": 63,
+      "ranks": {
+        "population": 36,
+        "populationDensity": 25,
+        "gdpPerCapita": 12,
+        "infrastructureScore": 13
+      }
+    },
+    "kitui": {
+      "code": 15,
+      "id": "15",
+      "name": "Kitui",
+      "capital": "Kitui",
+      "region": "Eastern",
+      "areaKm2": 30489.5,
+      "population": 1136187,
+      "populationDensity": 37,
+      "gdpPerCapita": 142000,
+      "infrastructureScore": 41,
+      "ranks": {
+        "population": 14,
+        "populationDensity": 37,
+        "gdpPerCapita": 43,
+        "infrastructureScore": 37
+      }
+    },
+    "KITUI": {
+      "code": 15,
+      "id": "15",
+      "name": "Kitui",
+      "capital": "Kitui",
+      "region": "Eastern",
+      "areaKm2": 30489.5,
+      "population": 1136187,
+      "populationDensity": 37,
+      "gdpPerCapita": 142000,
+      "infrastructureScore": 41,
+      "ranks": {
+        "population": 14,
+        "populationDensity": 37,
+        "gdpPerCapita": 43,
+        "infrastructureScore": 37
+      }
+    },
+    "machakos": {
+      "code": 16,
+      "id": "16",
+      "name": "Machakos",
+      "capital": "Machakos",
+      "region": "Eastern",
+      "areaKm2": 6208.2,
+      "population": 1421932,
+      "populationDensity": 229,
+      "gdpPerCapita": 312000,
+      "infrastructureScore": 68.5,
+      "ranks": {
+        "population": 8,
+        "populationDensity": 22,
+        "gdpPerCapita": 6,
+        "infrastructureScore": 9
+      }
+    },
+    "MACHAKOS": {
+      "code": 16,
+      "id": "16",
+      "name": "Machakos",
+      "capital": "Machakos",
+      "region": "Eastern",
+      "areaKm2": 6208.2,
+      "population": 1421932,
+      "populationDensity": 229,
+      "gdpPerCapita": 312000,
+      "infrastructureScore": 68.5,
+      "ranks": {
+        "population": 8,
+        "populationDensity": 22,
+        "gdpPerCapita": 6,
+        "infrastructureScore": 9
+      }
+    },
+    "makueni": {
+      "code": 17,
+      "id": "17",
+      "name": "Makueni",
+      "capital": "Wote",
+      "region": "Eastern",
+      "areaKm2": 8008.8,
+      "population": 987653,
+      "populationDensity": 123,
+      "gdpPerCapita": 194000,
+      "infrastructureScore": 53,
+      "ranks": {
+        "population": 21,
+        "populationDensity": 29,
+        "gdpPerCapita": 29,
+        "infrastructureScore": 28
+      }
+    },
+    "MAKUENI": {
+      "code": 17,
+      "id": "17",
+      "name": "Makueni",
+      "capital": "Wote",
+      "region": "Eastern",
+      "areaKm2": 8008.8,
+      "population": 987653,
+      "populationDensity": 123,
+      "gdpPerCapita": 194000,
+      "infrastructureScore": 53,
+      "ranks": {
+        "population": 21,
+        "populationDensity": 29,
+        "gdpPerCapita": 29,
+        "infrastructureScore": 28
+      }
+    },
+    "nyandarua": {
+      "code": 18,
+      "id": "18",
+      "name": "Nyandarua",
+      "capital": "Ol Kalou",
+      "region": "Central",
+      "areaKm2": 3245.3,
+      "population": 638289,
+      "populationDensity": 197,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 59,
+      "ranks": {
+        "population": 33,
+        "populationDensity": 26,
+        "gdpPerCapita": 14,
+        "infrastructureScore": 19
+      }
+    },
+    "NYANDARUA": {
+      "code": 18,
+      "id": "18",
+      "name": "Nyandarua",
+      "capital": "Ol Kalou",
+      "region": "Central",
+      "areaKm2": 3245.3,
+      "population": 638289,
+      "populationDensity": 197,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 59,
+      "ranks": {
+        "population": 33,
+        "populationDensity": 26,
+        "gdpPerCapita": 14,
+        "infrastructureScore": 19
+      }
+    },
+    "nyeri": {
+      "code": 19,
+      "id": "19",
+      "name": "Nyeri",
+      "capital": "Nyeri",
+      "region": "Central",
+      "areaKm2": 3337.2,
+      "population": 759164,
+      "populationDensity": 227,
+      "gdpPerCapita": 345000,
+      "infrastructureScore": 74.5,
+      "ranks": {
+        "population": 31,
+        "populationDensity": 23,
+        "gdpPerCapita": 4,
+        "infrastructureScore": 4
+      }
+    },
+    "NYERI": {
+      "code": 19,
+      "id": "19",
+      "name": "Nyeri",
+      "capital": "Nyeri",
+      "region": "Central",
+      "areaKm2": 3337.2,
+      "population": 759164,
+      "populationDensity": 227,
+      "gdpPerCapita": 345000,
+      "infrastructureScore": 74.5,
+      "ranks": {
+        "population": 31,
+        "populationDensity": 23,
+        "gdpPerCapita": 4,
+        "infrastructureScore": 4
+      }
+    },
+    "kirinyaga": {
+      "code": 20,
+      "id": "20",
+      "name": "Kirinyaga",
+      "capital": "Kerugoya",
+      "region": "Central",
+      "areaKm2": 1478.1,
+      "population": 610411,
+      "populationDensity": 413,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 69,
+      "ranks": {
+        "population": 35,
+        "populationDensity": 12,
+        "gdpPerCapita": 8,
+        "infrastructureScore": 8
+      }
+    },
+    "KIRINYAGA": {
+      "code": 20,
+      "id": "20",
+      "name": "Kirinyaga",
+      "capital": "Kerugoya",
+      "region": "Central",
+      "areaKm2": 1478.1,
+      "population": 610411,
+      "populationDensity": 413,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 69,
+      "ranks": {
+        "population": 35,
+        "populationDensity": 12,
+        "gdpPerCapita": 8,
+        "infrastructureScore": 8
+      }
+    },
+    "murang'a": {
+      "code": 21,
+      "id": "21",
+      "name": "Murang'a",
+      "capital": "Murang'a",
+      "region": "Central",
+      "areaKm2": 2558.8,
+      "population": 1056640,
+      "populationDensity": 413,
+      "gdpPerCapita": 280000,
+      "infrastructureScore": 66,
+      "ranks": {
+        "population": 18,
+        "populationDensity": 13,
+        "gdpPerCapita": 10,
+        "infrastructureScore": 10
+      }
+    },
+    "MURANG'A": {
+      "code": 21,
+      "id": "21",
+      "name": "Murang'a",
+      "capital": "Murang'a",
+      "region": "Central",
+      "areaKm2": 2558.8,
+      "population": 1056640,
+      "populationDensity": 413,
+      "gdpPerCapita": 280000,
+      "infrastructureScore": 66,
+      "ranks": {
+        "population": 18,
+        "populationDensity": 13,
+        "gdpPerCapita": 10,
+        "infrastructureScore": 10
+      }
+    },
+    "kiambu": {
+      "code": 22,
+      "id": "22",
+      "name": "Kiambu",
+      "capital": "Kiambu",
+      "region": "Central",
+      "areaKm2": 2543.5,
+      "population": 2417735,
+      "populationDensity": 951,
+      "gdpPerCapita": 395000,
+      "infrastructureScore": 79.5,
+      "ranks": {
+        "population": 2,
+        "populationDensity": 5,
+        "gdpPerCapita": 3,
+        "infrastructureScore": 3
+      }
+    },
+    "KIAMBU": {
+      "code": 22,
+      "id": "22",
+      "name": "Kiambu",
+      "capital": "Kiambu",
+      "region": "Central",
+      "areaKm2": 2543.5,
+      "population": 2417735,
+      "populationDensity": 951,
+      "gdpPerCapita": 395000,
+      "infrastructureScore": 79.5,
+      "ranks": {
+        "population": 2,
+        "populationDensity": 5,
+        "gdpPerCapita": 3,
+        "infrastructureScore": 3
+      }
+    },
+    "turkana": {
+      "code": 23,
+      "id": "23",
+      "name": "Turkana",
+      "capital": "Lodwar",
+      "region": "Rift Valley",
+      "areaKm2": 68680.3,
+      "population": 926976,
+      "populationDensity": 13,
+      "gdpPerCapita": 135000,
+      "infrastructureScore": 29.5,
+      "ranks": {
+        "population": 22,
+        "populationDensity": 44,
+        "gdpPerCapita": 45,
+        "infrastructureScore": 43
+      }
+    },
+    "TURKANA": {
+      "code": 23,
+      "id": "23",
+      "name": "Turkana",
+      "capital": "Lodwar",
+      "region": "Rift Valley",
+      "areaKm2": 68680.3,
+      "population": 926976,
+      "populationDensity": 13,
+      "gdpPerCapita": 135000,
+      "infrastructureScore": 29.5,
+      "ranks": {
+        "population": 22,
+        "populationDensity": 44,
+        "gdpPerCapita": 45,
+        "infrastructureScore": 43
+      }
+    },
+    "west pokot": {
+      "code": 24,
+      "id": "24",
+      "name": "West Pokot",
+      "capital": "Kapenguria",
+      "region": "Rift Valley",
+      "areaKm2": 9169.4,
+      "population": 621241,
+      "populationDensity": 68,
+      "gdpPerCapita": 146000,
+      "infrastructureScore": 34,
+      "ranks": {
+        "population": 34,
+        "populationDensity": 32,
+        "gdpPerCapita": 42,
+        "infrastructureScore": 40
+      }
+    },
+    "WEST POKOT": {
+      "code": 24,
+      "id": "24",
+      "name": "West Pokot",
+      "capital": "Kapenguria",
+      "region": "Rift Valley",
+      "areaKm2": 9169.4,
+      "population": 621241,
+      "populationDensity": 68,
+      "gdpPerCapita": 146000,
+      "infrastructureScore": 34,
+      "ranks": {
+        "population": 34,
+        "populationDensity": 32,
+        "gdpPerCapita": 42,
+        "infrastructureScore": 40
+      }
+    },
+    "samburu": {
+      "code": 25,
+      "id": "25",
+      "name": "Samburu",
+      "capital": "Maralal",
+      "region": "Rift Valley",
+      "areaKm2": 21022.2,
+      "population": 310327,
+      "populationDensity": 15,
+      "gdpPerCapita": 158000,
+      "infrastructureScore": 31,
+      "ranks": {
+        "population": 45,
+        "populationDensity": 42,
+        "gdpPerCapita": 39,
+        "infrastructureScore": 42
+      }
+    },
+    "SAMBURU": {
+      "code": 25,
+      "id": "25",
+      "name": "Samburu",
+      "capital": "Maralal",
+      "region": "Rift Valley",
+      "areaKm2": 21022.2,
+      "population": 310327,
+      "populationDensity": 15,
+      "gdpPerCapita": 158000,
+      "infrastructureScore": 31,
+      "ranks": {
+        "population": 45,
+        "populationDensity": 42,
+        "gdpPerCapita": 39,
+        "infrastructureScore": 42
+      }
+    },
+    "trans nzoia": {
+      "code": 26,
+      "id": "26",
+      "name": "Trans Nzoia",
+      "capital": "Kitale",
+      "region": "Rift Valley",
+      "areaKm2": 2495.6,
+      "population": 990341,
+      "populationDensity": 397,
+      "gdpPerCapita": 225000,
+      "infrastructureScore": 58.5,
+      "ranks": {
+        "population": 20,
+        "populationDensity": 14,
+        "gdpPerCapita": 18,
+        "infrastructureScore": 20
+      }
+    },
+    "TRANS NZOIA": {
+      "code": 26,
+      "id": "26",
+      "name": "Trans Nzoia",
+      "capital": "Kitale",
+      "region": "Rift Valley",
+      "areaKm2": 2495.6,
+      "population": 990341,
+      "populationDensity": 397,
+      "gdpPerCapita": 225000,
+      "infrastructureScore": 58.5,
+      "ranks": {
+        "population": 20,
+        "populationDensity": 14,
+        "gdpPerCapita": 18,
+        "infrastructureScore": 20
+      }
+    },
+    "uasin gishu": {
+      "code": 27,
+      "id": "27",
+      "name": "Uasin Gishu",
+      "capital": "Eldoret",
+      "region": "Rift Valley",
+      "areaKm2": 3345.2,
+      "population": 1163186,
+      "populationDensity": 348,
+      "gdpPerCapita": 310000,
+      "infrastructureScore": 72,
+      "ranks": {
+        "population": 11,
+        "populationDensity": 18,
+        "gdpPerCapita": 7,
+        "infrastructureScore": 6
+      }
+    },
+    "UASIN GISHU": {
+      "code": 27,
+      "id": "27",
+      "name": "Uasin Gishu",
+      "capital": "Eldoret",
+      "region": "Rift Valley",
+      "areaKm2": 3345.2,
+      "population": 1163186,
+      "populationDensity": 348,
+      "gdpPerCapita": 310000,
+      "infrastructureScore": 72,
+      "ranks": {
+        "population": 11,
+        "populationDensity": 18,
+        "gdpPerCapita": 7,
+        "infrastructureScore": 6
+      }
+    },
+    "elgeyo-marakwet": {
+      "code": 28,
+      "id": "28",
+      "name": "Elgeyo-Marakwet",
+      "capital": "Iten",
+      "region": "Rift Valley",
+      "areaKm2": 3029.9,
+      "population": 454480,
+      "populationDensity": 150,
+      "gdpPerCapita": 218000,
+      "infrastructureScore": 49,
+      "ranks": {
+        "population": 41,
+        "populationDensity": 28,
+        "gdpPerCapita": 20,
+        "infrastructureScore": 31
+      }
+    },
+    "ELGEYO-MARAKWET": {
+      "code": 28,
+      "id": "28",
+      "name": "Elgeyo-Marakwet",
+      "capital": "Iten",
+      "region": "Rift Valley",
+      "areaKm2": 3029.9,
+      "population": 454480,
+      "populationDensity": 150,
+      "gdpPerCapita": 218000,
+      "infrastructureScore": 49,
+      "ranks": {
+        "population": 41,
+        "populationDensity": 28,
+        "gdpPerCapita": 20,
+        "infrastructureScore": 31
+      }
+    },
+    "nandi": {
+      "code": 29,
+      "id": "29",
+      "name": "Nandi",
+      "capital": "Kapsabet",
+      "region": "Rift Valley",
+      "areaKm2": 2884.2,
+      "population": 885711,
+      "populationDensity": 307,
+      "gdpPerCapita": 220000,
+      "infrastructureScore": 56,
+      "ranks": {
+        "population": 25,
+        "populationDensity": 20,
+        "gdpPerCapita": 19,
+        "infrastructureScore": 24
+      }
+    },
+    "NANDI": {
+      "code": 29,
+      "id": "29",
+      "name": "Nandi",
+      "capital": "Kapsabet",
+      "region": "Rift Valley",
+      "areaKm2": 2884.2,
+      "population": 885711,
+      "populationDensity": 307,
+      "gdpPerCapita": 220000,
+      "infrastructureScore": 56,
+      "ranks": {
+        "population": 25,
+        "populationDensity": 20,
+        "gdpPerCapita": 19,
+        "infrastructureScore": 24
+      }
+    },
+    "baringo": {
+      "code": 30,
+      "id": "30",
+      "name": "Baringo",
+      "capital": "Kabarnet",
+      "region": "Rift Valley",
+      "areaKm2": 11015.3,
+      "population": 666763,
+      "populationDensity": 61,
+      "gdpPerCapita": 172000,
+      "infrastructureScore": 42,
+      "ranks": {
+        "population": 32,
+        "populationDensity": 34,
+        "gdpPerCapita": 37,
+        "infrastructureScore": 36
+      }
+    },
+    "BARINGO": {
+      "code": 30,
+      "id": "30",
+      "name": "Baringo",
+      "capital": "Kabarnet",
+      "region": "Rift Valley",
+      "areaKm2": 11015.3,
+      "population": 666763,
+      "populationDensity": 61,
+      "gdpPerCapita": 172000,
+      "infrastructureScore": 42,
+      "ranks": {
+        "population": 32,
+        "populationDensity": 34,
+        "gdpPerCapita": 37,
+        "infrastructureScore": 36
+      }
+    },
+    "laikipia": {
+      "code": 31,
+      "id": "31",
+      "name": "Laikipia",
+      "capital": "Rumuruti",
+      "region": "Rift Valley",
+      "areaKm2": 9461.9,
+      "population": 518560,
+      "populationDensity": 55,
+      "gdpPerCapita": 255000,
+      "infrastructureScore": 57.5,
+      "ranks": {
+        "population": 39,
+        "populationDensity": 35,
+        "gdpPerCapita": 15,
+        "infrastructureScore": 22
+      }
+    },
+    "LAIKIPIA": {
+      "code": 31,
+      "id": "31",
+      "name": "Laikipia",
+      "capital": "Rumuruti",
+      "region": "Rift Valley",
+      "areaKm2": 9461.9,
+      "population": 518560,
+      "populationDensity": 55,
+      "gdpPerCapita": 255000,
+      "infrastructureScore": 57.5,
+      "ranks": {
+        "population": 39,
+        "populationDensity": 35,
+        "gdpPerCapita": 15,
+        "infrastructureScore": 22
+      }
+    },
+    "nakuru": {
+      "code": 32,
+      "id": "32",
+      "name": "Nakuru",
+      "capital": "Nakuru",
+      "region": "Rift Valley",
+      "areaKm2": 7495.1,
+      "population": 2162202,
+      "populationDensity": 288,
+      "gdpPerCapita": 335000,
+      "infrastructureScore": 73,
+      "ranks": {
+        "population": 3,
+        "populationDensity": 21,
+        "gdpPerCapita": 5,
+        "infrastructureScore": 5
+      }
+    },
+    "NAKURU": {
+      "code": 32,
+      "id": "32",
+      "name": "Nakuru",
+      "capital": "Nakuru",
+      "region": "Rift Valley",
+      "areaKm2": 7495.1,
+      "population": 2162202,
+      "populationDensity": 288,
+      "gdpPerCapita": 335000,
+      "infrastructureScore": 73,
+      "ranks": {
+        "population": 3,
+        "populationDensity": 21,
+        "gdpPerCapita": 5,
+        "infrastructureScore": 5
+      }
+    },
+    "narok": {
+      "code": 33,
+      "id": "33",
+      "name": "Narok",
+      "capital": "Narok",
+      "region": "Rift Valley",
+      "areaKm2": 17944.1,
+      "population": 1157873,
+      "populationDensity": 65,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 44.5,
+      "ranks": {
+        "population": 12,
+        "populationDensity": 33,
+        "gdpPerCapita": 21,
+        "infrastructureScore": 35
+      }
+    },
+    "NAROK": {
+      "code": 33,
+      "id": "33",
+      "name": "Narok",
+      "capital": "Narok",
+      "region": "Rift Valley",
+      "areaKm2": 17944.1,
+      "population": 1157873,
+      "populationDensity": 65,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 44.5,
+      "ranks": {
+        "population": 12,
+        "populationDensity": 33,
+        "gdpPerCapita": 21,
+        "infrastructureScore": 35
+      }
+    },
+    "kajiado": {
+      "code": 34,
+      "id": "34",
+      "name": "Kajiado",
+      "capital": "Kajiado",
+      "region": "Rift Valley",
+      "areaKm2": 21900.9,
+      "population": 1117840,
+      "populationDensity": 51,
+      "gdpPerCapita": 275000,
+      "infrastructureScore": 62,
+      "ranks": {
+        "population": 16,
+        "populationDensity": 36,
+        "gdpPerCapita": 11,
+        "infrastructureScore": 15
+      }
+    },
+    "KAJIADO": {
+      "code": 34,
+      "id": "34",
+      "name": "Kajiado",
+      "capital": "Kajiado",
+      "region": "Rift Valley",
+      "areaKm2": 21900.9,
+      "population": 1117840,
+      "populationDensity": 51,
+      "gdpPerCapita": 275000,
+      "infrastructureScore": 62,
+      "ranks": {
+        "population": 16,
+        "populationDensity": 36,
+        "gdpPerCapita": 11,
+        "infrastructureScore": 15
+      }
+    },
+    "kericho": {
+      "code": 35,
+      "id": "35",
+      "name": "Kericho",
+      "capital": "Kericho",
+      "region": "Rift Valley",
+      "areaKm2": 2479,
+      "population": 901777,
+      "populationDensity": 364,
+      "gdpPerCapita": 248000,
+      "infrastructureScore": 63.5,
+      "ranks": {
+        "population": 23,
+        "populationDensity": 16,
+        "gdpPerCapita": 16,
+        "infrastructureScore": 12
+      }
+    },
+    "KERICHO": {
+      "code": 35,
+      "id": "35",
+      "name": "Kericho",
+      "capital": "Kericho",
+      "region": "Rift Valley",
+      "areaKm2": 2479,
+      "population": 901777,
+      "populationDensity": 364,
+      "gdpPerCapita": 248000,
+      "infrastructureScore": 63.5,
+      "ranks": {
+        "population": 23,
+        "populationDensity": 16,
+        "gdpPerCapita": 16,
+        "infrastructureScore": 12
+      }
+    },
+    "bomet": {
+      "code": 36,
+      "id": "36",
+      "name": "Bomet",
+      "capital": "Bomet",
+      "region": "Rift Valley",
+      "areaKm2": 2530.9,
+      "population": 875689,
+      "populationDensity": 346,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 54,
+      "ranks": {
+        "population": 26,
+        "populationDensity": 19,
+        "gdpPerCapita": 26,
+        "infrastructureScore": 27
+      }
+    },
+    "BOMET": {
+      "code": 36,
+      "id": "36",
+      "name": "Bomet",
+      "capital": "Bomet",
+      "region": "Rift Valley",
+      "areaKm2": 2530.9,
+      "population": 875689,
+      "populationDensity": 346,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 54,
+      "ranks": {
+        "population": 26,
+        "populationDensity": 19,
+        "gdpPerCapita": 26,
+        "infrastructureScore": 27
+      }
+    },
+    "kakamega": {
+      "code": 37,
+      "id": "37",
+      "name": "Kakamega",
+      "capital": "Kakamega",
+      "region": "Western",
+      "areaKm2": 3018.7,
+      "population": 1867579,
+      "populationDensity": 619,
+      "gdpPerCapita": 195000,
+      "infrastructureScore": 61,
+      "ranks": {
+        "population": 4,
+        "populationDensity": 7,
+        "gdpPerCapita": 28,
+        "infrastructureScore": 16
+      }
+    },
+    "KAKAMEGA": {
+      "code": 37,
+      "id": "37",
+      "name": "Kakamega",
+      "capital": "Kakamega",
+      "region": "Western",
+      "areaKm2": 3018.7,
+      "population": 1867579,
+      "populationDensity": 619,
+      "gdpPerCapita": 195000,
+      "infrastructureScore": 61,
+      "ranks": {
+        "population": 4,
+        "populationDensity": 7,
+        "gdpPerCapita": 28,
+        "infrastructureScore": 16
+      }
+    },
+    "vihiga": {
+      "code": 38,
+      "id": "38",
+      "name": "Vihiga",
+      "capital": "Mbale",
+      "region": "Western",
+      "areaKm2": 563.8,
+      "population": 590013,
+      "populationDensity": 1046,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 60.5,
+      "ranks": {
+        "population": 38,
+        "populationDensity": 3,
+        "gdpPerCapita": 36,
+        "infrastructureScore": 17
+      }
+    },
+    "VIHIGA": {
+      "code": 38,
+      "id": "38",
+      "name": "Vihiga",
+      "capital": "Mbale",
+      "region": "Western",
+      "areaKm2": 563.8,
+      "population": 590013,
+      "populationDensity": 1046,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 60.5,
+      "ranks": {
+        "population": 38,
+        "populationDensity": 3,
+        "gdpPerCapita": 36,
+        "infrastructureScore": 17
+      }
+    },
+    "bungoma": {
+      "code": 39,
+      "id": "39",
+      "name": "Bungoma",
+      "capital": "Bungoma",
+      "region": "Western",
+      "areaKm2": 3032.4,
+      "population": 1670570,
+      "populationDensity": 551,
+      "gdpPerCapita": 188000,
+      "infrastructureScore": 58,
+      "ranks": {
+        "population": 5,
+        "populationDensity": 9,
+        "gdpPerCapita": 31,
+        "infrastructureScore": 21
+      }
+    },
+    "BUNGOMA": {
+      "code": 39,
+      "id": "39",
+      "name": "Bungoma",
+      "capital": "Bungoma",
+      "region": "Western",
+      "areaKm2": 3032.4,
+      "population": 1670570,
+      "populationDensity": 551,
+      "gdpPerCapita": 188000,
+      "infrastructureScore": 58,
+      "ranks": {
+        "population": 5,
+        "populationDensity": 9,
+        "gdpPerCapita": 31,
+        "infrastructureScore": 21
+      }
+    },
+    "busia": {
+      "code": 40,
+      "id": "40",
+      "name": "Busia",
+      "capital": "Busia",
+      "region": "Western",
+      "areaKm2": 1694.5,
+      "population": 893681,
+      "populationDensity": 527,
+      "gdpPerCapita": 182000,
+      "infrastructureScore": 56.5,
+      "ranks": {
+        "population": 24,
+        "populationDensity": 10,
+        "gdpPerCapita": 34,
+        "infrastructureScore": 23
+      }
+    },
+    "BUSIA": {
+      "code": 40,
+      "id": "40",
+      "name": "Busia",
+      "capital": "Busia",
+      "region": "Western",
+      "areaKm2": 1694.5,
+      "population": 893681,
+      "populationDensity": 527,
+      "gdpPerCapita": 182000,
+      "infrastructureScore": 56.5,
+      "ranks": {
+        "population": 24,
+        "populationDensity": 10,
+        "gdpPerCapita": 34,
+        "infrastructureScore": 23
+      }
+    },
+    "siaya": {
+      "code": 41,
+      "id": "41",
+      "name": "Siaya",
+      "capital": "Siaya",
+      "region": "Nyanza",
+      "areaKm2": 2530.5,
+      "population": 993183,
+      "populationDensity": 392,
+      "gdpPerCapita": 190000,
+      "infrastructureScore": 55,
+      "ranks": {
+        "population": 19,
+        "populationDensity": 15,
+        "gdpPerCapita": 30,
+        "infrastructureScore": 26
+      }
+    },
+    "SIAYA": {
+      "code": 41,
+      "id": "41",
+      "name": "Siaya",
+      "capital": "Siaya",
+      "region": "Nyanza",
+      "areaKm2": 2530.5,
+      "population": 993183,
+      "populationDensity": 392,
+      "gdpPerCapita": 190000,
+      "infrastructureScore": 55,
+      "ranks": {
+        "population": 19,
+        "populationDensity": 15,
+        "gdpPerCapita": 30,
+        "infrastructureScore": 26
+      }
+    },
+    "kisumu": {
+      "code": 42,
+      "id": "42",
+      "name": "Kisumu",
+      "capital": "Kisumu",
+      "region": "Nyanza",
+      "areaKm2": 2085.9,
+      "population": 1155574,
+      "populationDensity": 554,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 71.5,
+      "ranks": {
+        "population": 13,
+        "populationDensity": 8,
+        "gdpPerCapita": 9,
+        "infrastructureScore": 7
+      }
+    },
+    "KISUMU": {
+      "code": 42,
+      "id": "42",
+      "name": "Kisumu",
+      "capital": "Kisumu",
+      "region": "Nyanza",
+      "areaKm2": 2085.9,
+      "population": 1155574,
+      "populationDensity": 554,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 71.5,
+      "ranks": {
+        "population": 13,
+        "populationDensity": 8,
+        "gdpPerCapita": 9,
+        "infrastructureScore": 7
+      }
+    },
+    "homa bay": {
+      "code": 43,
+      "id": "43",
+      "name": "Homa Bay",
+      "capital": "Homa Bay",
+      "region": "Nyanza",
+      "areaKm2": 3154.7,
+      "population": 1131950,
+      "populationDensity": 359,
+      "gdpPerCapita": 184000,
+      "infrastructureScore": 50.5,
+      "ranks": {
+        "population": 15,
+        "populationDensity": 17,
+        "gdpPerCapita": 33,
+        "infrastructureScore": 30
+      }
+    },
+    "HOMA BAY": {
+      "code": 43,
+      "id": "43",
+      "name": "Homa Bay",
+      "capital": "Homa Bay",
+      "region": "Nyanza",
+      "areaKm2": 3154.7,
+      "population": 1131950,
+      "populationDensity": 359,
+      "gdpPerCapita": 184000,
+      "infrastructureScore": 50.5,
+      "ranks": {
+        "population": 15,
+        "populationDensity": 17,
+        "gdpPerCapita": 33,
+        "infrastructureScore": 30
+      }
+    },
+    "migori": {
+      "code": 44,
+      "id": "44",
+      "name": "Migori",
+      "capital": "Migori",
+      "region": "Nyanza",
+      "areaKm2": 2596.5,
+      "population": 1116436,
+      "populationDensity": 430,
+      "gdpPerCapita": 198000,
+      "infrastructureScore": 52,
+      "ranks": {
+        "population": 17,
+        "populationDensity": 11,
+        "gdpPerCapita": 27,
+        "infrastructureScore": 29
+      }
+    },
+    "MIGORI": {
+      "code": 44,
+      "id": "44",
+      "name": "Migori",
+      "capital": "Migori",
+      "region": "Nyanza",
+      "areaKm2": 2596.5,
+      "population": 1116436,
+      "populationDensity": 430,
+      "gdpPerCapita": 198000,
+      "infrastructureScore": 52,
+      "ranks": {
+        "population": 17,
+        "populationDensity": 11,
+        "gdpPerCapita": 27,
+        "infrastructureScore": 29
+      }
+    },
+    "kisii": {
+      "code": 45,
+      "id": "45",
+      "name": "Kisii",
+      "capital": "Kisii",
+      "region": "Nyanza",
+      "areaKm2": 1317.5,
+      "population": 1266860,
+      "populationDensity": 962,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 62.5,
+      "ranks": {
+        "population": 9,
+        "populationDensity": 4,
+        "gdpPerCapita": 22,
+        "infrastructureScore": 14
+      }
+    },
+    "KISII": {
+      "code": 45,
+      "id": "45",
+      "name": "Kisii",
+      "capital": "Kisii",
+      "region": "Nyanza",
+      "areaKm2": 1317.5,
+      "population": 1266860,
+      "populationDensity": 962,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 62.5,
+      "ranks": {
+        "population": 9,
+        "populationDensity": 4,
+        "gdpPerCapita": 22,
+        "infrastructureScore": 14
+      }
+    },
+    "nyamira": {
+      "code": 46,
+      "id": "46",
+      "name": "Nyamira",
+      "capital": "Nyamira",
+      "region": "Nyanza",
+      "areaKm2": 899.4,
+      "population": 605576,
+      "populationDensity": 673,
+      "gdpPerCapita": 208000,
+      "infrastructureScore": 59.5,
+      "ranks": {
+        "population": 37,
+        "populationDensity": 6,
+        "gdpPerCapita": 24,
+        "infrastructureScore": 18
+      }
+    },
+    "NYAMIRA": {
+      "code": 46,
+      "id": "46",
+      "name": "Nyamira",
+      "capital": "Nyamira",
+      "region": "Nyanza",
+      "areaKm2": 899.4,
+      "population": 605576,
+      "populationDensity": 673,
+      "gdpPerCapita": 208000,
+      "infrastructureScore": 59.5,
+      "ranks": {
+        "population": 37,
+        "populationDensity": 6,
+        "gdpPerCapita": 24,
+        "infrastructureScore": 18
+      }
+    },
+    "nairobi": {
+      "code": 47,
+      "id": "47",
+      "name": "Nairobi",
+      "capital": "Nairobi",
+      "region": "Nairobi",
+      "areaKm2": 703.9,
+      "population": 4397073,
+      "populationDensity": 6247,
+      "gdpPerCapita": 645000,
+      "infrastructureScore": 93,
+      "ranks": {
+        "population": 1,
+        "populationDensity": 1,
+        "gdpPerCapita": 1,
+        "infrastructureScore": 1
+      }
+    },
+    "NAIROBI": {
+      "code": 47,
+      "id": "47",
+      "name": "Nairobi",
+      "capital": "Nairobi",
+      "region": "Nairobi",
+      "areaKm2": 703.9,
+      "population": 4397073,
+      "populationDensity": 6247,
+      "gdpPerCapita": 645000,
+      "infrastructureScore": 93,
+      "ranks": {
+        "population": 1,
+        "populationDensity": 1,
+        "gdpPerCapita": 1,
+        "infrastructureScore": 1
+      }
+    }
+  },
+  "countiesList": [
+    {
+      "code": 1,
+      "id": "1",
+      "name": "Mombasa",
+      "capital": "Mombasa",
+      "region": "Coast",
+      "areaKm2": 219.9,
+      "population": 1208333,
+      "populationDensity": 5495,
+      "gdpPerCapita": 492000,
+      "infrastructureScore": 84.5,
+      "ranks": {
+        "population": 10,
+        "populationDensity": 2,
+        "gdpPerCapita": 2,
+        "infrastructureScore": 2
+      }
+    },
+    {
+      "code": 2,
+      "id": "2",
+      "name": "Kwale",
+      "capital": "Kwale",
+      "region": "Coast",
+      "areaKm2": 8270.2,
+      "population": 866820,
+      "populationDensity": 105,
+      "gdpPerCapita": 164000,
+      "infrastructureScore": 48,
+      "ranks": {
+        "population": 28,
+        "populationDensity": 31,
+        "gdpPerCapita": 38,
+        "infrastructureScore": 32
+      }
+    },
+    {
+      "code": 3,
+      "id": "3",
+      "name": "Kilifi",
+      "capital": "Kilifi",
+      "region": "Coast",
+      "areaKm2": 12609.7,
+      "population": 1453787,
+      "populationDensity": 115,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 46.5,
+      "ranks": {
+        "population": 7,
+        "populationDensity": 30,
+        "gdpPerCapita": 35,
+        "infrastructureScore": 34
+      }
+    },
+    {
+      "code": 4,
+      "id": "4",
+      "name": "Tana River",
+      "capital": "Hola",
+      "region": "Coast",
+      "areaKm2": 38437,
+      "population": 315942,
+      "populationDensity": 8.2,
+      "gdpPerCapita": 138000,
+      "infrastructureScore": 29,
+      "ranks": {
+        "population": 44,
+        "populationDensity": 46,
+        "gdpPerCapita": 44,
+        "infrastructureScore": 44
+      }
+    },
+    {
+      "code": 5,
+      "id": "5",
+      "name": "Lamu",
+      "capital": "Lamu",
+      "region": "Coast",
+      "areaKm2": 6273.1,
+      "population": 143920,
+      "populationDensity": 23,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 38.5,
+      "ranks": {
+        "population": 47,
+        "populationDensity": 39,
+        "gdpPerCapita": 13,
+        "infrastructureScore": 38
+      }
+    },
+    {
+      "code": 6,
+      "id": "6",
+      "name": "Taita Taveta",
+      "capital": "Mwatate",
+      "region": "Coast",
+      "areaKm2": 17084.1,
+      "population": 340671,
+      "populationDensity": 20,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 47,
+      "ranks": {
+        "population": 43,
+        "populationDensity": 40,
+        "gdpPerCapita": 25,
+        "infrastructureScore": 33
+      }
+    },
+    {
+      "code": 7,
+      "id": "7",
+      "name": "Garissa",
+      "capital": "Garissa",
+      "region": "North Eastern",
+      "areaKm2": 44175,
+      "population": 841353,
+      "populationDensity": 19,
+      "gdpPerCapita": 156000,
+      "infrastructureScore": 32.5,
+      "ranks": {
+        "population": 29,
+        "populationDensity": 41,
+        "gdpPerCapita": 40,
+        "infrastructureScore": 41
+      }
+    },
+    {
+      "code": 8,
+      "id": "8",
+      "name": "Wajir",
+      "capital": "Wajir",
+      "region": "North Eastern",
+      "areaKm2": 56685.9,
+      "population": 781263,
+      "populationDensity": 14,
+      "gdpPerCapita": 132000,
+      "infrastructureScore": 24,
+      "ranks": {
+        "population": 30,
+        "populationDensity": 43,
+        "gdpPerCapita": 46,
+        "infrastructureScore": 46
+      }
+    },
+    {
+      "code": 9,
+      "id": "9",
+      "name": "Mandera",
+      "capital": "Mandera",
+      "region": "North Eastern",
+      "areaKm2": 25991.5,
+      "population": 867457,
+      "populationDensity": 33,
+      "gdpPerCapita": 124000,
+      "infrastructureScore": 22.5,
+      "ranks": {
+        "population": 27,
+        "populationDensity": 38,
+        "gdpPerCapita": 47,
+        "infrastructureScore": 47
+      }
+    },
+    {
+      "code": 10,
+      "id": "10",
+      "name": "Marsabit",
+      "capital": "Marsabit",
+      "region": "Eastern",
+      "areaKm2": 70961.2,
+      "population": 459785,
+      "populationDensity": 6.5,
+      "gdpPerCapita": 148000,
+      "infrastructureScore": 27,
+      "ranks": {
+        "population": 40,
+        "populationDensity": 47,
+        "gdpPerCapita": 41,
+        "infrastructureScore": 45
+      }
+    },
+    {
+      "code": 11,
+      "id": "11",
+      "name": "Isiolo",
+      "capital": "Isiolo",
+      "region": "Eastern",
+      "areaKm2": 25336.1,
+      "population": 268002,
+      "populationDensity": 11,
+      "gdpPerCapita": 185000,
+      "infrastructureScore": 36,
+      "ranks": {
+        "population": 46,
+        "populationDensity": 45,
+        "gdpPerCapita": 32,
+        "infrastructureScore": 39
+      }
+    },
+    {
+      "code": 12,
+      "id": "12",
+      "name": "Meru",
+      "capital": "Meru",
+      "region": "Eastern",
+      "areaKm2": 6936.2,
+      "population": 1545714,
+      "populationDensity": 223,
+      "gdpPerCapita": 246000,
+      "infrastructureScore": 64,
+      "ranks": {
+        "population": 6,
+        "populationDensity": 24,
+        "gdpPerCapita": 17,
+        "infrastructureScore": 11
+      }
+    },
+    {
+      "code": 13,
+      "id": "13",
+      "name": "Tharaka-Nithi",
+      "capital": "Kathwana",
+      "region": "Eastern",
+      "areaKm2": 2564.4,
+      "population": 393177,
+      "populationDensity": 153,
+      "gdpPerCapita": 212000,
+      "infrastructureScore": 55.5,
+      "ranks": {
+        "population": 42,
+        "populationDensity": 27,
+        "gdpPerCapita": 23,
+        "infrastructureScore": 25
+      }
+    },
+    {
+      "code": 14,
+      "id": "14",
+      "name": "Embu",
+      "capital": "Embu",
+      "region": "Eastern",
+      "areaKm2": 2820.7,
+      "population": 608599,
+      "populationDensity": 216,
+      "gdpPerCapita": 268000,
+      "infrastructureScore": 63,
+      "ranks": {
+        "population": 36,
+        "populationDensity": 25,
+        "gdpPerCapita": 12,
+        "infrastructureScore": 13
+      }
+    },
+    {
+      "code": 15,
+      "id": "15",
+      "name": "Kitui",
+      "capital": "Kitui",
+      "region": "Eastern",
+      "areaKm2": 30489.5,
+      "population": 1136187,
+      "populationDensity": 37,
+      "gdpPerCapita": 142000,
+      "infrastructureScore": 41,
+      "ranks": {
+        "population": 14,
+        "populationDensity": 37,
+        "gdpPerCapita": 43,
+        "infrastructureScore": 37
+      }
+    },
+    {
+      "code": 16,
+      "id": "16",
+      "name": "Machakos",
+      "capital": "Machakos",
+      "region": "Eastern",
+      "areaKm2": 6208.2,
+      "population": 1421932,
+      "populationDensity": 229,
+      "gdpPerCapita": 312000,
+      "infrastructureScore": 68.5,
+      "ranks": {
+        "population": 8,
+        "populationDensity": 22,
+        "gdpPerCapita": 6,
+        "infrastructureScore": 9
+      }
+    },
+    {
+      "code": 17,
+      "id": "17",
+      "name": "Makueni",
+      "capital": "Wote",
+      "region": "Eastern",
+      "areaKm2": 8008.8,
+      "population": 987653,
+      "populationDensity": 123,
+      "gdpPerCapita": 194000,
+      "infrastructureScore": 53,
+      "ranks": {
+        "population": 21,
+        "populationDensity": 29,
+        "gdpPerCapita": 29,
+        "infrastructureScore": 28
+      }
+    },
+    {
+      "code": 18,
+      "id": "18",
+      "name": "Nyandarua",
+      "capital": "Ol Kalou",
+      "region": "Central",
+      "areaKm2": 3245.3,
+      "population": 638289,
+      "populationDensity": 197,
+      "gdpPerCapita": 265000,
+      "infrastructureScore": 59,
+      "ranks": {
+        "population": 33,
+        "populationDensity": 26,
+        "gdpPerCapita": 14,
+        "infrastructureScore": 19
+      }
+    },
+    {
+      "code": 19,
+      "id": "19",
+      "name": "Nyeri",
+      "capital": "Nyeri",
+      "region": "Central",
+      "areaKm2": 3337.2,
+      "population": 759164,
+      "populationDensity": 227,
+      "gdpPerCapita": 345000,
+      "infrastructureScore": 74.5,
+      "ranks": {
+        "population": 31,
+        "populationDensity": 23,
+        "gdpPerCapita": 4,
+        "infrastructureScore": 4
+      }
+    },
+    {
+      "code": 20,
+      "id": "20",
+      "name": "Kirinyaga",
+      "capital": "Kerugoya",
+      "region": "Central",
+      "areaKm2": 1478.1,
+      "population": 610411,
+      "populationDensity": 413,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 69,
+      "ranks": {
+        "population": 35,
+        "populationDensity": 12,
+        "gdpPerCapita": 8,
+        "infrastructureScore": 8
+      }
+    },
+    {
+      "code": 21,
+      "id": "21",
+      "name": "Murang'a",
+      "capital": "Murang'a",
+      "region": "Central",
+      "areaKm2": 2558.8,
+      "population": 1056640,
+      "populationDensity": 413,
+      "gdpPerCapita": 280000,
+      "infrastructureScore": 66,
+      "ranks": {
+        "population": 18,
+        "populationDensity": 13,
+        "gdpPerCapita": 10,
+        "infrastructureScore": 10
+      }
+    },
+    {
+      "code": 22,
+      "id": "22",
+      "name": "Kiambu",
+      "capital": "Kiambu",
+      "region": "Central",
+      "areaKm2": 2543.5,
+      "population": 2417735,
+      "populationDensity": 951,
+      "gdpPerCapita": 395000,
+      "infrastructureScore": 79.5,
+      "ranks": {
+        "population": 2,
+        "populationDensity": 5,
+        "gdpPerCapita": 3,
+        "infrastructureScore": 3
+      }
+    },
+    {
+      "code": 23,
+      "id": "23",
+      "name": "Turkana",
+      "capital": "Lodwar",
+      "region": "Rift Valley",
+      "areaKm2": 68680.3,
+      "population": 926976,
+      "populationDensity": 13,
+      "gdpPerCapita": 135000,
+      "infrastructureScore": 29.5,
+      "ranks": {
+        "population": 22,
+        "populationDensity": 44,
+        "gdpPerCapita": 45,
+        "infrastructureScore": 43
+      }
+    },
+    {
+      "code": 24,
+      "id": "24",
+      "name": "West Pokot",
+      "capital": "Kapenguria",
+      "region": "Rift Valley",
+      "areaKm2": 9169.4,
+      "population": 621241,
+      "populationDensity": 68,
+      "gdpPerCapita": 146000,
+      "infrastructureScore": 34,
+      "ranks": {
+        "population": 34,
+        "populationDensity": 32,
+        "gdpPerCapita": 42,
+        "infrastructureScore": 40
+      }
+    },
+    {
+      "code": 25,
+      "id": "25",
+      "name": "Samburu",
+      "capital": "Maralal",
+      "region": "Rift Valley",
+      "areaKm2": 21022.2,
+      "population": 310327,
+      "populationDensity": 15,
+      "gdpPerCapita": 158000,
+      "infrastructureScore": 31,
+      "ranks": {
+        "population": 45,
+        "populationDensity": 42,
+        "gdpPerCapita": 39,
+        "infrastructureScore": 42
+      }
+    },
+    {
+      "code": 26,
+      "id": "26",
+      "name": "Trans Nzoia",
+      "capital": "Kitale",
+      "region": "Rift Valley",
+      "areaKm2": 2495.6,
+      "population": 990341,
+      "populationDensity": 397,
+      "gdpPerCapita": 225000,
+      "infrastructureScore": 58.5,
+      "ranks": {
+        "population": 20,
+        "populationDensity": 14,
+        "gdpPerCapita": 18,
+        "infrastructureScore": 20
+      }
+    },
+    {
+      "code": 27,
+      "id": "27",
+      "name": "Uasin Gishu",
+      "capital": "Eldoret",
+      "region": "Rift Valley",
+      "areaKm2": 3345.2,
+      "population": 1163186,
+      "populationDensity": 348,
+      "gdpPerCapita": 310000,
+      "infrastructureScore": 72,
+      "ranks": {
+        "population": 11,
+        "populationDensity": 18,
+        "gdpPerCapita": 7,
+        "infrastructureScore": 6
+      }
+    },
+    {
+      "code": 28,
+      "id": "28",
+      "name": "Elgeyo-Marakwet",
+      "capital": "Iten",
+      "region": "Rift Valley",
+      "areaKm2": 3029.9,
+      "population": 454480,
+      "populationDensity": 150,
+      "gdpPerCapita": 218000,
+      "infrastructureScore": 49,
+      "ranks": {
+        "population": 41,
+        "populationDensity": 28,
+        "gdpPerCapita": 20,
+        "infrastructureScore": 31
+      }
+    },
+    {
+      "code": 29,
+      "id": "29",
+      "name": "Nandi",
+      "capital": "Kapsabet",
+      "region": "Rift Valley",
+      "areaKm2": 2884.2,
+      "population": 885711,
+      "populationDensity": 307,
+      "gdpPerCapita": 220000,
+      "infrastructureScore": 56,
+      "ranks": {
+        "population": 25,
+        "populationDensity": 20,
+        "gdpPerCapita": 19,
+        "infrastructureScore": 24
+      }
+    },
+    {
+      "code": 30,
+      "id": "30",
+      "name": "Baringo",
+      "capital": "Kabarnet",
+      "region": "Rift Valley",
+      "areaKm2": 11015.3,
+      "population": 666763,
+      "populationDensity": 61,
+      "gdpPerCapita": 172000,
+      "infrastructureScore": 42,
+      "ranks": {
+        "population": 32,
+        "populationDensity": 34,
+        "gdpPerCapita": 37,
+        "infrastructureScore": 36
+      }
+    },
+    {
+      "code": 31,
+      "id": "31",
+      "name": "Laikipia",
+      "capital": "Rumuruti",
+      "region": "Rift Valley",
+      "areaKm2": 9461.9,
+      "population": 518560,
+      "populationDensity": 55,
+      "gdpPerCapita": 255000,
+      "infrastructureScore": 57.5,
+      "ranks": {
+        "population": 39,
+        "populationDensity": 35,
+        "gdpPerCapita": 15,
+        "infrastructureScore": 22
+      }
+    },
+    {
+      "code": 32,
+      "id": "32",
+      "name": "Nakuru",
+      "capital": "Nakuru",
+      "region": "Rift Valley",
+      "areaKm2": 7495.1,
+      "population": 2162202,
+      "populationDensity": 288,
+      "gdpPerCapita": 335000,
+      "infrastructureScore": 73,
+      "ranks": {
+        "population": 3,
+        "populationDensity": 21,
+        "gdpPerCapita": 5,
+        "infrastructureScore": 5
+      }
+    },
+    {
+      "code": 33,
+      "id": "33",
+      "name": "Narok",
+      "capital": "Narok",
+      "region": "Rift Valley",
+      "areaKm2": 17944.1,
+      "population": 1157873,
+      "populationDensity": 65,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 44.5,
+      "ranks": {
+        "population": 12,
+        "populationDensity": 33,
+        "gdpPerCapita": 21,
+        "infrastructureScore": 35
+      }
+    },
+    {
+      "code": 34,
+      "id": "34",
+      "name": "Kajiado",
+      "capital": "Kajiado",
+      "region": "Rift Valley",
+      "areaKm2": 21900.9,
+      "population": 1117840,
+      "populationDensity": 51,
+      "gdpPerCapita": 275000,
+      "infrastructureScore": 62,
+      "ranks": {
+        "population": 16,
+        "populationDensity": 36,
+        "gdpPerCapita": 11,
+        "infrastructureScore": 15
+      }
+    },
+    {
+      "code": 35,
+      "id": "35",
+      "name": "Kericho",
+      "capital": "Kericho",
+      "region": "Rift Valley",
+      "areaKm2": 2479,
+      "population": 901777,
+      "populationDensity": 364,
+      "gdpPerCapita": 248000,
+      "infrastructureScore": 63.5,
+      "ranks": {
+        "population": 23,
+        "populationDensity": 16,
+        "gdpPerCapita": 16,
+        "infrastructureScore": 12
+      }
+    },
+    {
+      "code": 36,
+      "id": "36",
+      "name": "Bomet",
+      "capital": "Bomet",
+      "region": "Rift Valley",
+      "areaKm2": 2530.9,
+      "population": 875689,
+      "populationDensity": 346,
+      "gdpPerCapita": 205000,
+      "infrastructureScore": 54,
+      "ranks": {
+        "population": 26,
+        "populationDensity": 19,
+        "gdpPerCapita": 26,
+        "infrastructureScore": 27
+      }
+    },
+    {
+      "code": 37,
+      "id": "37",
+      "name": "Kakamega",
+      "capital": "Kakamega",
+      "region": "Western",
+      "areaKm2": 3018.7,
+      "population": 1867579,
+      "populationDensity": 619,
+      "gdpPerCapita": 195000,
+      "infrastructureScore": 61,
+      "ranks": {
+        "population": 4,
+        "populationDensity": 7,
+        "gdpPerCapita": 28,
+        "infrastructureScore": 16
+      }
+    },
+    {
+      "code": 38,
+      "id": "38",
+      "name": "Vihiga",
+      "capital": "Mbale",
+      "region": "Western",
+      "areaKm2": 563.8,
+      "population": 590013,
+      "populationDensity": 1046,
+      "gdpPerCapita": 178000,
+      "infrastructureScore": 60.5,
+      "ranks": {
+        "population": 38,
+        "populationDensity": 3,
+        "gdpPerCapita": 36,
+        "infrastructureScore": 17
+      }
+    },
+    {
+      "code": 39,
+      "id": "39",
+      "name": "Bungoma",
+      "capital": "Bungoma",
+      "region": "Western",
+      "areaKm2": 3032.4,
+      "population": 1670570,
+      "populationDensity": 551,
+      "gdpPerCapita": 188000,
+      "infrastructureScore": 58,
+      "ranks": {
+        "population": 5,
+        "populationDensity": 9,
+        "gdpPerCapita": 31,
+        "infrastructureScore": 21
+      }
+    },
+    {
+      "code": 40,
+      "id": "40",
+      "name": "Busia",
+      "capital": "Busia",
+      "region": "Western",
+      "areaKm2": 1694.5,
+      "population": 893681,
+      "populationDensity": 527,
+      "gdpPerCapita": 182000,
+      "infrastructureScore": 56.5,
+      "ranks": {
+        "population": 24,
+        "populationDensity": 10,
+        "gdpPerCapita": 34,
+        "infrastructureScore": 23
+      }
+    },
+    {
+      "code": 41,
+      "id": "41",
+      "name": "Siaya",
+      "capital": "Siaya",
+      "region": "Nyanza",
+      "areaKm2": 2530.5,
+      "population": 993183,
+      "populationDensity": 392,
+      "gdpPerCapita": 190000,
+      "infrastructureScore": 55,
+      "ranks": {
+        "population": 19,
+        "populationDensity": 15,
+        "gdpPerCapita": 30,
+        "infrastructureScore": 26
+      }
+    },
+    {
+      "code": 42,
+      "id": "42",
+      "name": "Kisumu",
+      "capital": "Kisumu",
+      "region": "Nyanza",
+      "areaKm2": 2085.9,
+      "population": 1155574,
+      "populationDensity": 554,
+      "gdpPerCapita": 295000,
+      "infrastructureScore": 71.5,
+      "ranks": {
+        "population": 13,
+        "populationDensity": 8,
+        "gdpPerCapita": 9,
+        "infrastructureScore": 7
+      }
+    },
+    {
+      "code": 43,
+      "id": "43",
+      "name": "Homa Bay",
+      "capital": "Homa Bay",
+      "region": "Nyanza",
+      "areaKm2": 3154.7,
+      "population": 1131950,
+      "populationDensity": 359,
+      "gdpPerCapita": 184000,
+      "infrastructureScore": 50.5,
+      "ranks": {
+        "population": 15,
+        "populationDensity": 17,
+        "gdpPerCapita": 33,
+        "infrastructureScore": 30
+      }
+    },
+    {
+      "code": 44,
+      "id": "44",
+      "name": "Migori",
+      "capital": "Migori",
+      "region": "Nyanza",
+      "areaKm2": 2596.5,
+      "population": 1116436,
+      "populationDensity": 430,
+      "gdpPerCapita": 198000,
+      "infrastructureScore": 52,
+      "ranks": {
+        "population": 17,
+        "populationDensity": 11,
+        "gdpPerCapita": 27,
+        "infrastructureScore": 29
+      }
+    },
+    {
+      "code": 45,
+      "id": "45",
+      "name": "Kisii",
+      "capital": "Kisii",
+      "region": "Nyanza",
+      "areaKm2": 1317.5,
+      "population": 1266860,
+      "populationDensity": 962,
+      "gdpPerCapita": 215000,
+      "infrastructureScore": 62.5,
+      "ranks": {
+        "population": 9,
+        "populationDensity": 4,
+        "gdpPerCapita": 22,
+        "infrastructureScore": 14
+      }
+    },
+    {
+      "code": 46,
+      "id": "46",
+      "name": "Nyamira",
+      "capital": "Nyamira",
+      "region": "Nyanza",
+      "areaKm2": 899.4,
+      "population": 605576,
+      "populationDensity": 673,
+      "gdpPerCapita": 208000,
+      "infrastructureScore": 59.5,
+      "ranks": {
+        "population": 37,
+        "populationDensity": 6,
+        "gdpPerCapita": 24,
+        "infrastructureScore": 18
+      }
+    },
+    {
+      "code": 47,
+      "id": "47",
+      "name": "Nairobi",
+      "capital": "Nairobi",
+      "region": "Nairobi",
+      "areaKm2": 703.9,
+      "population": 4397073,
+      "populationDensity": 6247,
+      "gdpPerCapita": 645000,
+      "infrastructureScore": 93,
+      "ranks": {
+        "population": 1,
+        "populationDensity": 1,
+        "gdpPerCapita": 1,
+        "infrastructureScore": 1
+      }
+    }
+  ]
+}

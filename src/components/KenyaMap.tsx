@@ -1,6 +1,7 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { Raycaster } from 'three';
+import { Raycaster, Group } from 'three';
+import { gsap } from 'gsap';
 import CountyMesh from './CountyMesh';
 import { geoToGeometry } from '../utils/geoToGeometry';
 import { lngLatToXZ } from '../utils/projection';
@@ -17,7 +18,8 @@ type FeatureCollection = {
   features: Feature[];
 };
 
-export default function KenyaMap({ metric = 'populationDensity' as const }) {
+export default function KenyaMap({ metric = 'populationDensity' as const, onHover }: { metric?: string; onHover?: (id: string | null, value: any) => void }) {
+
   const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
   const [indicators, setIndicators] = useState<any>(null);
 
@@ -57,6 +59,16 @@ export default function KenyaMap({ metric = 'populationDensity' as const }) {
   // Interaction: raycast for hover
   const { camera, scene } = useThree();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const groupRef = useRef<Group>(null);
+
+  // Animate height morph on metric change
+  useEffect(() => {
+    if (groupRef.current) {
+      // Reset scale to 0 then animate to 1 for a smooth morph effect
+      groupRef.current.scale.set(1, 0, 1);
+      gsap.to(groupRef.current.scale, { y: 1, duration: 1, ease: 'power2.out' });
+    }
+  }, [metric]);
   const raycaster = useMemo(() => new Raycaster(), []);
 
   useFrame(() => {
@@ -67,11 +79,16 @@ export default function KenyaMap({ metric = 'populationDensity' as const }) {
     const intersect = raycaster.intersectObjects(scene.children, true);
     if (intersect.length > 0) {
       const object = intersect[0].object;
-      // Assume each mesh has userData.id set via CountyMesh component
       const id = (object as any).userData?.id || null;
       setHoveredId(id);
+      // Notify parent about hover info
+      if (onHover) {
+        const value = id ? (indicators?.[id]?.[metric] ?? null) : null;
+        onHover(id, value);
+      }
     } else {
       setHoveredId(null);
+      if (onHover) onHover(null, null);
     }
   });
 
@@ -81,15 +98,18 @@ export default function KenyaMap({ metric = 'populationDensity' as const }) {
 
   return (
     <>
-      {countyGeometries.map(({ id, geometry, height }) => (
-        <CountyMesh
-          key={id}
-          id={id}
-          geometry={geometry}
-          maxHeight={maxHeight}
-          isHovered={hoveredId === id}
-        />
-      ))}
+      <group ref={groupRef}>
+        {countyGeometries.map(({ id, geometry, height }) => (
+          <CountyMesh
+            key={id}
+            id={id}
+            geometry={geometry}
+            maxHeight={maxHeight}
+            isHovered={hoveredId === id}
+          />
+        ))}
+      </group>
     </>
   );
+
 }

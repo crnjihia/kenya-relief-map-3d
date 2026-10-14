@@ -1,168 +1,193 @@
-# Kenya Relief Map 3D — Development Indicators Explorer
+<div align="center">
 
+# Kenya Relief Map 3D
+
+### An Interactive 3D WebGL Visualisation of Kenya's County-Level Development Indicators
+
+[![Deploy to GitHub Pages](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/deploy.yml/badge.svg)](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/deploy.yml)
 [![CI](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/ci.yml/badge.svg)](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18%2B-61dafb.svg)](https://react.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-r186-black.svg)](https://threejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646cff.svg)](https://vitejs.dev/)
+[![Release](https://img.shields.io/github/v/release/crnjihia/kenya-relief-map-3d?color=10b981)](https://github.com/crnjihia/kenya-relief-map-3d/releases)
 
-An interactive 3D WebGL data visualisation of Kenya's 47 county-level development indicators. Population density, total population, Gross County Product (GDP per capita), and composite infrastructure scores are rendered as extruded 3D relief geometries on an architectural coordinate grid. Built with React Three Fiber, custom GLSL shaders, GSAP animations, and Recharts.
+<br/>
 
----
+<a href="https://crnjihia.github.io/kenya-relief-map-3d/">
+  <img src="./docs/preview.png" alt="Kenya Relief Map 3D Interactive Visualization" width="100%" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.6);" />
+</a>
 
-## Live Demo & Screenshots
+<br/>
+<br/>
 
-- **Live Application:** [https://kenya-relief-map-3d.vercel.app](https://kenya-relief-map-3d.vercel.app)
-- **Preview:**
+[**🌐 Live Demo on GitHub Pages**](https://crnjihia.github.io/kenya-relief-map-3d/) • [**📊 Data Sources**](#-data-sources--methodology) • [**⚙️ Architecture**](#-system-architecture) • [**🚀 Deployment**](#-github-pages-deployment-guide)
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  [3D] Kenya Relief Map 3D  [Population Density] [Population] [GDP/Cap] [Infrastructure]│
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                        │
-│                                      ▲  Mandera (Rank #14)                             │
-│                           ▲        ▲▲▲                                                 │
-│                     Turkana     Marsabit        ▲ Wajir                                │
-│                       ▲▲▲▲                                                             │
-│                         ▲▲    Kenya 3D Mesh                                            │
-│                      ▲▲▲▲▲▲   (Custom GLSL Shader & Rim Light)                         │
-│                     Kiambu ▲                                                           │
-│                     NAIROBI ▲▲▲▲                                  [Detail Panel]       │
-│                               ▲▲▲  Mombasa (5,495/km²)            - Nairobi County     │
-│                                                                   - Pop: 4,397,073     │
-│   [Legend: Low ────── Mid ────── High]                            - Recharts vs Nat'l  │
-│                                                                   - Rank: #1 of 47     │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-```
+</div>
 
 ---
 
-## Key Features
+## 🧭 Overview
 
-- **Extruded 3D Relief Mapping:** Kenya's 47 county boundaries parsed from GeoJSON and extruded into 3D geometries along the Y-axis.
-- **Custom GLSL Shader:** Maps normalized indicator heights to a 5-stop color gradient ramp (`Deep Blue` → `Cyan` → `Emerald` → `Amber` → `Coral Red`) with directional key lighting and Fresnel rim lighting.
-- **GSAP Height Morphing:** Instant, smooth animation transitions when switching indicators (e.g. Population Density to GDP per capita).
-- **Interactive OrbitControls:** Rotate, pan, and zoom with constrained polar angles to maintain map orientation.
-- **Click-to-Focus Camera:** Smooth GSAP camera animation zooms to focus on clicked counties.
-- **Drill-Down Analytics Panel:** Slide-in drawer with Recharts bar chart comparing the selected county against national averages across all 4 indicators.
-- **Real-Time Hover Tooltip HUD:** Glassmorphic floating HUD displays county rank, formatted metric value, and comparison vs national averages.
+**Kenya Relief Map 3D** is an interactive, open-source civic data visualization tool mapping Kenya’s 47 counties into a physical 3D relief model. Key socioeconomic and demographic indicators are mapped directly to 3D vertical extrusion heights and a perception-tuned GLSL color gradient.
+
+Whether exploring urban density contrasts across Nairobi and Mombasa, or assessing regional infrastructure disparities, users can seamlessly rotate, tilt, and zoom through Kenya's geography and drill down into per-county comparative benchmarks.
+
+### 🌟 Key Highlights
+
+- **Extruded 3D County Relief:** All 47 official county administrative boundaries parsed from GeoJSON and extruded into 3D geometries on the XZ ground plane.
+- **Custom GLSL Shader:** Maps normalized indicator heights to a vibrant 5-stop color gradient ramp (`Deep Blue` $\rightarrow$ `Cyan` $\rightarrow$ `Emerald Green` $\rightarrow$ `Amber Gold` $\rightarrow$ `Coral Red`) with directional sun shading and Fresnel rim lighting.
+- **Smooth GSAP Height Morphing:** Switch between metrics with animated 3D height scale and color interpolation.
+- **Click-to-Focus Camera:** Smooth GSAP camera transition automatically swoops down and frames clicked counties.
+- **Comparative Analytics Drawer:** Slide-in detail panel featuring Recharts horizontal bar charts benchmarking the selected county against national averages.
+- **Glassmorphic HUD & Tooltip:** Real-time hover HUD tracking county ranking (`#X of 47`), metric value, and comparison vs national benchmarks.
 
 ---
 
-## Architecture
+## 🎮 Interactive Controls
+
+| Input | Action |
+| :--- | :--- |
+| **Left Click + Drag** | Orbit and rotate the 3D map around the center |
+| **Right Click + Drag** (or Shift + Left Click) | Pan the camera horizontally and vertically |
+| **Mouse Wheel / Pinch** | Smoothly zoom in and out |
+| **Hover on County** | Highlight county with emissive glow and display HUD tooltip |
+| **Click on County** | Swoop camera to focus and slide open the county analytics drawer |
+| **Metric Buttons (Top)** | Morph 3D extrusion heights between Population Density, Population, GDP, and Infrastructure |
+| **County Selector (Top Right)** | Jump directly to any of the 47 counties |
+| **Reset View Button / ESC** | Return the camera to the national perspective |
+
+---
+
+## 🏗️ System Architecture
 
 ```mermaid
 graph TD
-    A[Data Layer: GeoJSON + indicators.json] --> B[useGeoData Hook]
-    A --> C[useCountyIndicators Hook]
-    B --> D[geoToGeometry Converter]
-    D --> E[projection.ts: lngLatToXZ]
-    D --> F[ExtrudeGeometry + BufferGeometryUtils Merge]
-    B --> G[KenyaMap.tsx]
-    C --> G
-    G --> H[CountyMesh.tsx]
-    H --> I[Custom GLSL Shaders: county.vert + county.frag]
-    G --> J[Scene.tsx: Canvas + OrbitControls + Lights]
-    J --> K[App.tsx]
-    K --> L[DetailPanel.tsx with Recharts]
-    K --> M[IndicatorSelector.tsx]
-    K --> N[Legend.tsx]
-    K --> O[Tooltip.tsx]
-    K --> P[useCameraFocus GSAP Animator]
+    subgraph Data Layer
+        A[kenya_counties.geojson] --> C[useGeoData Hook]
+        B[indicators.json] --> D[useCountyIndicators Hook]
+    end
+
+    subgraph Geometry Pipeline
+        C --> E[geoToGeometry.ts]
+        E --> F[projection.ts: lngLatToXZ]
+        E --> G[ExtrudeGeometry + MultiPolygon Merge]
+    end
+
+    subgraph 3D Presentation Layer
+        G --> H[KenyaMap.tsx]
+        D --> H
+        H --> I[CountyMesh.tsx]
+        I --> J[Custom GLSL: county.vert + county.frag]
+        H --> K[Scene.tsx: R3F Canvas + OrbitControls]
+    end
+
+    subgraph Interactive UI Chrome
+        K --> L[App.tsx Shell]
+        L --> M[IndicatorSelector.tsx: GSAP Morph Trigger]
+        L --> N[DetailPanel.tsx: Recharts Benchmark Bar]
+        L --> O[Legend.tsx: Color Ramp Bar]
+        L --> P[Tooltip.tsx: Hover HUD]
+        L --> Q[useCameraFocus.ts: GSAP Camera Swoop]
+    end
 ```
 
 ---
 
-## Technical Stack
-
-- **Core:** React 18, TypeScript, Vite
-- **3D & WebGL:** Three.js (r186), React Three Fiber (`@react-three/fiber`), React Three Drei (`@react-three/drei`)
-- **Shaders:** GLSL Vertex & Fragment shaders (sampling RGBA DataTexture ramps, rim lighting, contour bands)
-- **Transitions:** GreenSock Animation Platform (`gsap`)
-- **2D Analytics:** `recharts` (ResponsiveContainer, BarChart, ReferenceLine)
-- **Styling:** Tailwind CSS (Dark glassmorphic HUD chrome)
-- **Unit Testing:** Vitest (`projection.test.ts`, `normalise.test.ts`, `geoToGeometry.test.ts`)
-- **CI/CD:** GitHub Actions (`.github/workflows/ci.yml`)
-
----
-
-## Data Sources
+## 📊 Data Sources & Methodology
 
 1. **KNBS 2019 Kenya Population and Housing Census:**
-   - 2019 National Census Volume I & II (County total population and land area).
-2. **KNBS Gross County Product (GCP) Reports:**
-   - County Gross Product economic estimates per capita in Kenyan Shillings (KES).
-3. **Kenya National Infrastructure Index:**
-   - Composite connectivity score (0–100) evaluating paved road networks, national power grid access, potable water coverage, and broadband cellular penetration.
+   - Total county population and land surface area (Volume I & II).
+   - Population density calculated as $\text{residents} / \text{km}^2$.
+2. **Gross County Product (GCP) Reports (KNBS):**
+   - Gross domestic output per county divided by population to estimate GDP per capita in Kenyan Shillings (KES).
+3. **Composite Infrastructure Index (0–100):**
+   - Weighted composite index incorporating paved road accessibility, electricity grid connectivity, potable piped water access, and cellular broadband coverage.
 4. **Administrative Boundaries:**
    - Independent Electoral and Boundaries Commission (IEBC) & GADM Level 1 Kenya County demarcations.
 
 ---
 
-## Performance Optimizations
+## 🛠️ Tech Stack
 
-- **Geometry Memoization:** Geometries are parsed and converted to Three.js `BufferGeometry` once on load via `useMemo` in `useGeoData`.
-- **Draw Call Reduction:** MultiPolygon components per county (such as islands in Lamu, Mombasa, and Lake Victoria) are merged into single unified BufferGeometries using `BufferGeometryUtils.mergeGeometries`.
-- **Sub-Pixel Polygon Simplification:** High-vertex linear rings are simplified with a tolerance filter, keeping 60 FPS on mid-range laptops.
-- **Shader Height Scaling:** Height morphing leverages `mesh.scale.y` and shader uniform interpolation via GSAP, avoiding expensive geometry rebuilds during user interactions.
-
----
-
-## How to Update Indicator Data
-
-Indicator datasets are stored as clean JSON files:
-- Static public asset: `public/data/indicators.json`
-- Source data backup: `src/data/indicators.json`
-
-To update data for any county:
-```json
-{
-  "code": 47,
-  "id": "47",
-  "name": "Nairobi",
-  "capital": "Nairobi",
-  "region": "Nairobi",
-  "areaKm2": 703.9,
-  "population": 4397073,
-  "populationDensity": 6247,
-  "gdpPerCapita": 645000,
-  "infrastructureScore": 93.0
-}
-```
-Run `npm run build` or start `npm run dev` to see immediate updates.
+- **Framework:** [React 18](https://react.dev/) + [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **3D / WebGL:** [Three.js (r186)](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [Drei](https://github.com/pmndrs/drei)
+- **Shaders:** Custom GLSL Vertex and Fragment shaders (RGBA DataTexture ramp sampling, Fresnel rim light, elevation contours)
+- **Animation:** [GSAP 3](https://greensock.com/gsap/)
+- **Charts:** [Recharts](https://recharts.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Testing:** [Vitest](https://vitest.dev/)
+- **CI / CD:** GitHub Actions (`deploy.yml` + `ci.yml`)
 
 ---
 
-## Getting Started
+## 🚀 GitHub Pages Deployment Guide
+
+This repository includes automated GitHub Actions deployment. To publish your live map:
+
+1. **Push your code to GitHub:**
+   ```bash
+   git push -u origin main
+   ```
+2. **Enable GitHub Pages:**
+   - In your repository on GitHub, navigate to **Settings** $\rightarrow$ **Pages**.
+   - Under **Build and deployment** $\rightarrow$ **Source**, choose **GitHub Actions**.
+3. **Automatic Deployment:**
+   - The `.github/workflows/deploy.yml` workflow will automatically run, build the production bundle, and publish the site to:
+     ```text
+     https://<your-username>.github.io/kenya-relief-map-3d/
+     ```
+
+---
+
+## 💻 Local Development Setup
 
 ### Prerequisites
-- Node.js >= 18
-- npm >= 9
+- Node.js >= 18.0.0
+- npm >= 9.0.0
 
-### Installation
+### Quick Start
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/crnjihia/kenya-relief-map-3d.git
 cd kenya-relief-map-3d
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Run unit tests
+# 3. Run unit tests
 npm test
 
-# Launch Vite development server
+# 4. Start local development server
 npm run dev
 ```
 
-### Production Build
+### Production Build & Preview
 ```bash
+# Build optimized bundle
 npm run build
+
+# Preview build locally
 npm run preview
 ```
 
 ---
 
-## License
+## 🧪 Testing
 
-MIT License. See [LICENSE](LICENSE) for full details.
+The test suite validates spatial projections, unit scaling, and geometry generation:
+
+```bash
+npm test
+```
+
+Test suites cover:
+- `tests/projection.test.ts`: Kenya bounding box ($33.9^\circ \text{–} 41.9^\circ \text{ E}, -4.8^\circ \text{–} 4.7^\circ \text{ N}$) conversion and inverse projection.
+- `tests/normalise.test.ts`: Clamping bounds, perceptual power-law scaling, and currency/unit formatting.
+- `tests/geoToGeometry.test.ts`: 3D ExtrudeGeometry construction and MultiPolygon archipelago merging.
+
+---
+
+## 📄 License
+
+This project is open-source and distributed under the [MIT License](LICENSE).

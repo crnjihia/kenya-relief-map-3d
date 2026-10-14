@@ -3,7 +3,13 @@ import KenyaMap from './components/KenyaMap';
 import Tooltip from './components/Tooltip';
 
 function App() {
-  const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [tooltip, setTooltip] = useState<{content:string; x:number; y:number}>({ content: '', x: 0, y: 0 });
+  const [metric, setMetric] = useState('populationDensity');
+
+  const handleMetricChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setMetric(e.target.value);
+  };
+
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -30,7 +36,7 @@ function App() {
         {/* Indicator selector will go here */}
         <div className="flex items-center space-x-2">
           <label htmlFor="metric" className="text-sm">Metric:</label>
-          <select id="metric" name="metric" className="border rounded p-1">
+          <select id="metric" name="metric" className="border rounded p-1" value={metric} onChange={handleMetricChange}>
             <option value="populationDensity">Population Density</option>
             <option value="population">Population</option>
             <option value="gdpPerCapita">GDP per Capita</option>
@@ -40,7 +46,7 @@ function App() {
       </header>
       {/* Main content */}
       <main className="flex-1 overflow-hidden relative">
-        <KenyaMap onHover={handleHover} />
+        <KenyaMap metric={metric} onHover={handleHover} />
         {tooltip.content && <Tooltip content={tooltip.content} position={{ x: tooltip.x, y: tooltip.y }} />}
       </main>
       {/* Footer */}

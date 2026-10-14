@@ -1,0 +1,61 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release'
+        required: true
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Archive distribution bundle
+        run: |
+          cd dist
+          zip -r ../kenya-relief-map-3d-v1.0.0.zip .
+          cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name || inputs.tag }}
+          name: Kenya Relief Map 3D ${{ github.ref_name || inputs.tag }}
+          draft: false
+          prerelease: false
+          body: |
+            ## Kenya Relief Map 3D — Official Release
+
+            An interactive 3D WebGL data visualisation of Kenya's 47 county-level development indicators.
+
+            ### ✨ Key Features
+            - **3D Extruded County Relief:** 47 county administrative boundaries parsed from GeoJSON and extruded along the Y-axis.
+            - **Custom GLSL Shader:** Maps normalized indicator heights to a 5-stop color gradient ramp (`Deep Blue` → `Cyan` → `Emerald` → `Amber` → `Coral Red`) with directional lighting and Fresnel rim lighting.
+            - **GSAP Height Morphing:** Instant smooth animation transitions when switching indicators (Population Density, Total Population, GDP per Capita, and Infrastructure Score).
+            - **Interactive Camera Controls:** OrbitControls with constrained polar angles and smooth GSAP camera focus on county clicks.
+            - **Drill-Down Analytics:** Slide-in detail panel featuring Recharts horizontal bar charts benchmarking counties against national averages.
+            - **Civic Data:** KNBS 2019 Census, Gross County Product reports, and composite infrastructure scores.
+          files: kenya-relief-map-3d-v1.0.0.zip

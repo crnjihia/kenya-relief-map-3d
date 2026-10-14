@@ -21,7 +21,7 @@
 <br/>
 <br/>
 
-[**🌐 Live Demo on GitHub Pages**](https://crnjihia.github.io/kenya-relief-map-3d/) • [**📊 Data Sources**](#-data-sources--methodology) • [**⚙️ Architecture**](#-system-architecture) • [**🚀 Deployment**](#-github-pages-deployment-guide)
+[**🌐 Live Demo on GitHub Pages**](https://crnjihia.github.io/kenya-relief-map-3d/) • [**📊 Data Sources**](#-data-sources--methodology) • [**⚙️ Architecture**](#-system-architecture) • [**💻 Local Setup**](#-local-development-setup)
 
 </div>
 
@@ -118,25 +118,6 @@ graph TD
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Testing:** [Vitest](https://vitest.dev/)
 - **CI / CD:** GitHub Actions (`deploy.yml` + `ci.yml`)
-
----
-
-## 🚀 GitHub Pages Deployment Guide
-
-This repository includes automated GitHub Actions deployment. To publish your live map:
-
-1. **Push your code to GitHub:**
-   ```bash
-   git push -u origin main
-   ```
-2. **Enable GitHub Pages:**
-   - In your repository on GitHub, navigate to **Settings** $\rightarrow$ **Pages**.
-   - Under **Build and deployment** $\rightarrow$ **Source**, choose **GitHub Actions**.
-3. **Automatic Deployment:**
-   - The `.github/workflows/deploy.yml` workflow will automatically run, build the production bundle, and publish the site to:
-     ```text
-     https://<your-username>.github.io/kenya-relief-map-3d/
-     ```
 
 ---
 

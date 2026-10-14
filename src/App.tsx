@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import KenyaMap from './components/KenyaMap';
-import Tooltip from './components/Tooltip';
+import Legend from './components/Legend';
+import DetailPanel from './components/DetailPanel';
 
 function App() {
   const [tooltip, setTooltip] = useState<{content:string; x:number; y:number}>({ content: '', x: 0, y: 0 });
   const [metric, setMetric] = useState('populationDensity');
+  const [selectedCounty, setSelectedCounty] = useState<string | null>(null);
+
 
   const handleMetricChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setMetric(e.target.value);
@@ -20,7 +23,10 @@ function App() {
   }, []);
 
 
-  const handleHover = (id: string | null, value: any) => {
+  const handleSelect = (id: string | null) => {
+    setSelectedCounty(id);
+  };
+
     if (id && value !== undefined && value !== null) {
       setTooltip({ content: `${id}: ${value}`, x: mousePos.x, y: mousePos.y });
     } else {
@@ -47,8 +53,9 @@ function App() {
       </header>
       {/* Main content */}
       <main className="flex-1 overflow-hidden relative">
-        <KenyaMap metric={metric} onHover={handleHover} />
+        <KenyaMap metric={metric} onHover={handleHover} onSelect={handleSelect} />
         {tooltip.content && <Tooltip content={tooltip.content} position={{ x: tooltip.x, y: tooltip.y }} />}
+        {selectedCounty && <DetailPanel countyId={selectedCounty} indicators={null} />}
       </main>
       {/* Footer */}
       <footer className="bg-white dark:bg-gray-800 text-center p-2 text-sm">

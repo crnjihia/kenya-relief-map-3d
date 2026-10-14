@@ -19,7 +19,7 @@ type FeatureCollection = {
   features: Feature[];
 };
 
-export default function KenyaMap({ metric = 'populationDensity' as const, onHover }: { metric?: string; onHover?: (id: string | null, value: any) => void }) {
+export default function KenyaMap({ metric = 'populationDensity' as const, onHover, onSelect }: { metric?: string; onHover?: (id: string | null, value: any) => void; onSelect?: (id: string | null) => void }) {
 
   const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
   const [indicators, setIndicators] = useState<any>(null);
@@ -112,6 +112,7 @@ export default function KenyaMap({ metric = 'populationDensity' as const, onHove
               const center = new Vector3();
               geometry.boundingBox?.getCenter(center);
               focusOn(center);
+              if (onSelect) onSelect(id);
             }}
           />
         ))}

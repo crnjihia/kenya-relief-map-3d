@@ -37,7 +37,7 @@ export default function LoadingScreen({
 
         {/* Title */}
         <h1 className="text-2xl font-bold tracking-tight text-white mb-1">
-          Ramani 3D
+          Kenya Relief Map 3D
         </h1>
         <p className="text-xs uppercase tracking-widest text-sky-400 font-semibold mb-6">
           Kenya County Development Indicators

@@ -1,4 +1,4 @@
-# Ramani 3D — Kenya Development Indicators 3D Explorer
+# Kenya Relief Map 3D — Development Indicators Explorer
 
 [![CI](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/ci.yml/badge.svg)](https://github.com/crnjihia/kenya-relief-map-3d/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -12,12 +12,12 @@ An interactive 3D WebGL data visualisation of Kenya's 47 county-level developmen
 
 ## Live Demo & Screenshots
 
-- **Live Application:** [https://ramani-3d-kenya.vercel.app](https://ramani-3d-kenya.vercel.app)
+- **Live Application:** [https://kenya-relief-map-3d.vercel.app](https://kenya-relief-map-3d.vercel.app)
 - **Preview:**
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  [3D] Ramani 3D — Kenya  [Population Density] [Population] [GDP/Cap] [Infrastructure]  │
+│  [3D] Kenya Relief Map 3D  [Population Density] [Population] [GDP/Cap] [Infrastructure]│
 ├────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                        │
 │                                      ▲  Mandera (Rank #14)                             │

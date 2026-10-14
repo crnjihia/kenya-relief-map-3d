@@ -120,7 +120,7 @@ export default function App() {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg font-bold tracking-tight text-white leading-none">
-                Ramani 3D
+                Kenya Relief Map 3D
               </h1>
               <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                 Kenya

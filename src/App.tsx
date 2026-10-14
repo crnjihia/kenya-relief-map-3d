@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import KenyaMap from './components/KenyaMap';
+import Tooltip from './components/Tooltip';
 
 function App() {
+  const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handler);
+    return () => window.removeEventListener('mousemove', handler);
+  }, []);
+
+
+  const handleHover = (id: string | null, value: any) => {
+    if (id && value !== undefined && value !== null) {
+      setTooltip({ content: `${id}: ${value}`, x: mousePos.x, y: mousePos.y });
+    } else {
+      setTooltip({ content: '', x: 0, y: 0 });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
       {/* Top bar */}
@@ -19,15 +39,15 @@ function App() {
         </div>
       </header>
       {/* Main content */}
-      <main className="flex-1 overflow-hidden">
-        <KenyaMap />
+      <main className="flex-1 overflow-hidden relative">
+        <KenyaMap onHover={handleHover} />
+        {tooltip.content && <Tooltip content={tooltip.content} position={{ x: tooltip.x, y: tooltip.y }} />}
       </main>
       {/* Footer */}
       <footer className="bg-white dark:bg-gray-800 text-center p-2 text-sm">
         Data sources: KNBS, GADM
       </footer>
-    </div>
-  );
+    </div>;
 }
 
 export default App;
